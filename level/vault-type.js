@@ -165,9 +165,9 @@ gs.loadVaults = function () {
 	};
 	
 	// Dungeon Tunnels Generator:
-	dungeonTunnelsGenerator.middleVaultTypeNames.forEach(name => this.vaultTypes[name] = {path: 'assets/maps/vaults/dungeonTunnelsTemplates/' + name + '.json'});
-	dungeonTunnelsGenerator.edgeVaultTypeNames.forEach(name => this.vaultTypes[name] = {path: 'assets/maps/vaults/dungeonTunnelsTemplates/' + name + '.json'});
-	dungeonTunnelsGenerator.cornerVaultTypeNames.forEach(name => this.vaultTypes[name] = {path: 'assets/maps/vaults/dungeonTunnelsTemplates/' + name + '.json'});
+	dungeonTunnelsGenerator.middleVaultTypeNames.forEach(name => this.vaultTypes[name] = {path: 'assets/maps/vaults/DungeonTunnelsTemplates/' + name + '.json'});
+	dungeonTunnelsGenerator.edgeVaultTypeNames.forEach(name => this.vaultTypes[name] = {path: 'assets/maps/vaults/DungeonTunnelsTemplates/' + name + '.json'});
+	dungeonTunnelsGenerator.cornerVaultTypeNames.forEach(name => this.vaultTypes[name] = {path: 'assets/maps/vaults/DungeonTunnelsTemplates/' + name + '.json'});
 	
 	// Pit Path Generator:
 	pitPathGenerator.middleVaultTypeNames.forEach(name => this.vaultTypes[name] = {path: 'assets/maps/vaults/PitPathsTemplates/' + name + '.json'});
