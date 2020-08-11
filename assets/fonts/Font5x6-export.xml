@@ -1,0 +1,28 @@
+<font>
+	<info face="C:\Users\Dima\Dropbox\Projects\Rogue-Fable-III-Steam
+wjs-sdk-v0.35.0-win-x64\rogue-fable-III\assets\fonts\Font5x6-export" size="80" />
+	<common lineHeight="80" scaleW="158" scaleH="79" pages="1" />
+	<pages>
+		<page id="0" file="C:\Users\Dima\Dropbox\Projects\Rogue-Fable-III-Steam
+wjs-sdk-v0.35.0-win-x64\rogue-fable-III\assets\fonts\Font5x6-export.png" />
+	</pages>
+	<chars count="96">
+		<char id="33" x="0" y="73" width="1" height="5" xoffset="0" yoffset="75" xadvance="2" /><!-- ! -->
+		<char id="34" x="0" y="20" width="26" height="6" xoffset="0" yoffset="75" xadvance="27" /><!-- " -->
+		<char id="35" x="0" y="62" width="2" height="5" xoffset="0" yoffset="75" xadvance="3" /><!-- # -->
+		<char id="36" x="0" y="56" width="2" height="5" xoffset="0" yoffset="75" xadvance="3" /><!-- $ -->
+		<char id="37" x="0" y="33" width="12" height="6" xoffset="0" yoffset="75" xadvance="13" /><!-- % -->
+		<char id="38" x="0" y="52" width="6" height="3" xoffset="0" yoffset="77" xadvance="7" /><!-- & -->
+		<char id="39" x="0" y="14" width="56" height="5" xoffset="0" yoffset="75" xadvance="57" /><!-- ' -->
+		<char id="40" x="0" y="68" width="2" height="4" xoffset="0" yoffset="76" xadvance="3" /><!-- ( -->
+		<char id="41" x="0" y="0" width="157" height="6" xoffset="0" yoffset="75" xadvance="158" /><!-- ) -->
+		<char id="42" x="0" y="46" width="7" height="5" xoffset="0" yoffset="75" xadvance="8" /><!-- * -->
+		<char id="43" x="0" y="27" width="12" height="5" xoffset="0" yoffset="75" xadvance="13" /><!-- + -->
+		<char id="44" x="0" y="7" width="136" height="6" xoffset="0" yoffset="75" xadvance="137" /><!-- , -->
+		<char id="45" x="0" y="40" width="9" height="5" xoffset="0" yoffset="75" xadvance="10" /><!-- - -->
+		<char id="32" x="0" y="0" width="0" height="0" xoffset="0" yoffset="0" xadvance="20" /><!--   -->
+		<char id="9" x="0" y="0" width="0" height="0" xoffset="0" yoffset="0" xadvance="160" /><!-- 	 -->
+	</chars>
+	<kernings count="0">
+	</kernings>
+</font>
