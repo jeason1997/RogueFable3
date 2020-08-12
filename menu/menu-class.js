@@ -42,7 +42,7 @@ function ClassSelectMenu () {
 	this.createChallengePanel(startX + 6, 534);
 	
 	// Back button:
-	this.backButton = gs.createTextButton(startX + width / 2, 534 + 70, 'Back', this.onBackClicked, this, this.group);
+	this.backButton = gs.createTextButton(startX + width / 2, 534 + 70, '返回', this.onBackClicked, this, this.group);
 	
 	// Achievement Text:
 	this.achievementText = gs.createText(startX + 8, SCREEN_HEIGHT, '', LARGE_WHITE_FONT, this.group);
@@ -161,7 +161,7 @@ ClassSelectMenu.prototype.update = function () {
 			str = gs.capitalSplit(panel.button.className);
 			
 			if (panel.button.className === 'Barbarian') {
-				str += '\nAbility cooldowns recharge when killing enemies.';
+				str += '\n杀死敌人时，能力会冷却。';
 			}
 			
 			str += this.getStatsFor(panel.button.className);
@@ -178,11 +178,11 @@ ClassSelectMenu.prototype.update = function () {
 		}
 		// Challenge not started:
 		else {
-			str = "Start Daily challenge for: " + date.toDateString();
+			str = "开始每日挑战: " + date.toDateString();
 		}
 		
-		str += '\nBest Win Streak: ' + gs.bestChallengeWinStreak();
-		str += '\nCurrent Win Streak: ' + gs.currentChallengeWinStreak();
+		str += '\n最佳连胜次数: ' + gs.bestChallengeWinStreak();
+		str += '\n当前连胜次数: ' + gs.currentChallengeWinStreak();
 	}
 	
 	// Set Achievement Text:
@@ -209,8 +209,8 @@ ClassSelectMenu.prototype.getStatsFor = function (className) {
 	
 	//str += 'Num Wins: ' + gs.numWinsWithClass(className) + '\n';
 	//str += 'Num Deaths: ' + gs.numDeathsWithClass(className) + '\n';
-	str += 'Best Win Streak: ' + gs.bestWinStreakWithClass(className) + '\n';
-	str += 'Current Win Streak: ' + gs.currentWinStreakWithClass(className);
+	str += '最佳连胜次数: ' + gs.bestWinStreakWithClass(className) + '\n';
+	str += '当前连胜次数: ' + gs.currentWinStreakWithClass(className);
 	return str;
 };
 

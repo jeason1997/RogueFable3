@@ -20,7 +20,7 @@ function UIOptionsMenu() {
 	sprite.scale.setTo(SCALE_FACTOR, SCALE_FACTOR);
 	
 	// Title Text:
-	this.titleText = gs.createText(startX + width / 2, startY + 20, 'Game Options', HUGE_WHITE_FONT, this.group);
+	this.titleText = gs.createText(startX + width / 2, startY + 20, '游戏设置', HUGE_WHITE_FONT, this.group);
 	gs.centerText(this.titleText);
 	
 	// Sound:
@@ -30,10 +30,10 @@ function UIOptionsMenu() {
 	this.musicVolumeSlider = gs.createBar(startX + 6, startY + 80, HEALTH_BAR_FRAME, this.group);
 	
 	// Full Screen:
-	this.fullScreenButton = gs.createTextButton(startX + 100 + 6, startY + 124, 'Toggle Full Screen', this.onFullScreenClicked, this, this.group);
+	this.fullScreenButton = gs.createTextButton(startX + 100 + 6, startY + 124, '切换全屏', this.onFullScreenClicked, this, this.group);
 	
 	// Close button:
-	this.closeButton = gs.createTextButton(startX + width / 2, startY + height - 20, 'Close', this.close, this, this.group);
+	this.closeButton = gs.createTextButton(startX + width / 2, startY + height - 20, '关闭', this.close, this, this.group);
 	
 	
 	this.group.visible = false;
@@ -73,11 +73,11 @@ UIOptionsMenu.prototype.update = function () {
 UIOptionsMenu.prototype.refresh = function () {
 	// Sound Slider:
 	this.soundVolumeSlider.setPercent(gs.soundVolume);
-	this.soundVolumeSlider.setText('Sound: ' + gs.toPercentStr(gs.soundVolume));
+	this.soundVolumeSlider.setText('音效: ' + gs.toPercentStr(gs.soundVolume));
 	
 	// Music Slider:
 	this.musicVolumeSlider.setPercent(gs.musicVolume);
-	this.musicVolumeSlider.setText('Music: ' + gs.toPercentStr(gs.musicVolume));
+	this.musicVolumeSlider.setText('音乐: ' + gs.toPercentStr(gs.musicVolume));
 };
 
 // OPEN:

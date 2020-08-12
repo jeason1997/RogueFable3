@@ -46,7 +46,7 @@ function UIHelpMenu() {
 	this.text = gs.createText(startX + 4, startY + 40, lines.join('\n'), SMALL_WHITE_FONT, this.group);
 	
 	// Close button:
-	this.closeButton = gs.createTextButton(startX + width / 2, startY + 520, 'Close', this.close, this, this.group);
+	this.closeButton = gs.createTextButton(startX + width / 2, startY + 520, '关闭', this.close, this, this.group);
 	
 	this.group.visible = false;
 }

@@ -50,7 +50,7 @@ function UIShopMenu() {
 	this.costText = gs.createText(startX + width / 2, startY + 490, '', LARGE_WHITE_FONT, this.group);
 	
 	// Close button:
-	this.closeButton = gs.createTextButton(startX + width / 2, startY + height - 20, 'Close', this.close, this, this.group);
+	this.closeButton = gs.createTextButton(startX + width / 2, startY + height - 20, '关闭', this.close, this, this.group);
 	
 	this.group.visible = false;
 }

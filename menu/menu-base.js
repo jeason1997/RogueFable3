@@ -26,7 +26,7 @@ function MainMenuBase () {
 	this.versionText = gs.createText(4, 0, 'Version: ' + gs.versionStr, SMALL_WHITE_FONT, this.group);
 	
 	// Credits Text:
-	this.creditsText = gs.createText(4, SCREEN_HEIGHT, 'Programming and Art by: Justin Wang\nSound: www.kenney.nl and ArtisticDude\nMusic: Nooskewl Games', SMALL_WHITE_FONT, this.group);
+	this.creditsText = gs.createText(4, SCREEN_HEIGHT, '程序及美术: Justin Wang\n音效: www.kenney.nl and ArtisticDude\n音乐: Nooskewl Games', SMALL_WHITE_FONT, this.group);
 	this.creditsText.anchor.setTo(0, 1);
 	
 	// User Name Text:

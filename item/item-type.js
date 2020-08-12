@@ -629,7 +629,7 @@ gs.setItemDescriptions = function () {
 	// WANDS:
 	this.itemTypes.WandOfBlades.desc = 'Summons a temporary swarm of spectral blades which will attack your enemies.';
 	
-	this.itemTypes.Key.desc = "Allows you to open locked doors";
+	this.itemTypes.Key.desc = "允许您打开上锁的门";
     
     this.itemTypes.Chakram.desc = "Hits multiple enemies in a line";
 	

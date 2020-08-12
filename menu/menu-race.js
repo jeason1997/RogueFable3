@@ -21,7 +21,7 @@ function RaceSelectMenu () {
 	sprite.scale.setTo(SCALE_FACTOR, SCALE_FACTOR);
 	
 	// Title Text:
-	this.titleText = gs.createText(startX + width / 2, 0, 'Select Race', HUGE_WHITE_FONT, this.group); 
+	this.titleText = gs.createText(startX + width / 2, 0, '选择种族', HUGE_WHITE_FONT, this.group); 
 	this.titleText.anchor.setTo(0.5, 0);
 	
 	// Text:
@@ -41,7 +41,7 @@ function RaceSelectMenu () {
 	}, this);
 	
 	// Back button:
-	this.backButton = gs.createTextButton(startX + width / 2, this.raceButtons[this.raceButtons.length - 1].group.y + iconSpaceY, 'Back', this.onBackClicked, this, this.group);
+	this.backButton = gs.createTextButton(startX + width / 2, this.raceButtons[this.raceButtons.length - 1].group.y + iconSpaceY, '返回', this.onBackClicked, this, this.group);
 	
 	
 	

@@ -34,7 +34,7 @@ function UIGameMenu() {
 	gs.centerText(this.titleText);
 
 	// Close button:
-	this.closeButton = gs.createTextButton(startX + width / 2, startY + height - 20, 'Close', this.close, this, this.group);
+	this.closeButton = gs.createTextButton(startX + width / 2, startY + height - 20, '关闭', this.close, this, this.group);
 	
 	this.group.visible = false;
 }

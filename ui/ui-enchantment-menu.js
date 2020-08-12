@@ -29,7 +29,7 @@ function UIEnchantmentMenu() {
 	this.uiItemSlotList = new UIItemSlotList(startX + width / 2 - 42 * 3, startY + 40, 6, 6, null, this.slotClicked, this, this.group);
 	
 	// Close button:
-	this.closeButton = gs.createTextButton(startX + width / 2, startY + height - 20, 'Close', this.close, this, this.group);
+	this.closeButton = gs.createTextButton(startX + width / 2, startY + height - 20, '关闭', this.close, this, this.group);
 	
 	
 	this.group.visible = false;

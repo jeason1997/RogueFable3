@@ -33,7 +33,7 @@ function MainMenu () {
 	
 	this.newGameButton = 		gs.createTextButton(startX + width / 2, y + spacing * i++, '新游戏', this.onNewGameClicked, this, this.group);
 	this.continueGameButton = 	gs.createTextButton(startX + width / 2, y + spacing * i++, '继续游戏', this.onContinueGameClicked, this, this.group);
-	this.recordsButton = 		gs.createTextButton(startX + width / 2, y + spacing * i++, '游戏记录', this.onRecordsClicked, this, this.group);
+	this.recordsButton = 		gs.createTextButton(startX + width / 2, y + spacing * i++, '成就', this.onRecordsClicked, this, this.group);
 	this.optionsButton =		gs.createTextButton(startX + width / 2, y + spacing * i++, '设置', this.onOptionsClicked, this, this.group);	
 	this.exitButton = 			gs.createTextButton(startX + width / 2, y + spacing * i++, '退出', this.onExitClicked, this, this.group);	
 	

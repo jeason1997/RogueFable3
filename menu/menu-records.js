@@ -20,7 +20,7 @@ function UIRecordMenu() {
 	sprite.scale.setTo(SCALE_FACTOR, SCALE_FACTOR);
 	
 	// Title:
-	this.titleText = gs.createText(startX + width / 2, startY + 20, 'Game Records', HUGE_WHITE_FONT, this.group);
+	this.titleText = gs.createText(startX + width / 2, startY + 20, '成就', HUGE_WHITE_FONT, this.group);
 	gs.centerText(this.titleText);
 	
 	// Class Buttons:
@@ -59,7 +59,7 @@ function UIRecordMenu() {
 	this.text = gs.createText(startX + 4, startY + 100, '', SMALL_WHITE_FONT, this.group);
 	
 	// Close button:
-	this.closeButton = gs.createTextButton(startX + width / 2, SCREEN_HEIGHT - 20, 'Close', this.close, this, this.group);
+	this.closeButton = gs.createTextButton(startX + width / 2, SCREEN_HEIGHT - 20, '关闭', this.close, this, this.group);
 	
 	
 	// Start with All selected:
@@ -109,11 +109,11 @@ UIRecordMenu.prototype.refresh = function () {
 		numDeaths = gs.numDeathsWithClass(this.selectedClass);
 	}
 	
-	str += 'Total Wins: ' + numWins + '\n';
-	str += 'Total Deaths: ' + numDeaths + '\n';
+	str += '通关次数: ' + numWins + '\n';
+	str += '死亡次数: ' + numDeaths + '\n';
 
 	if (numWins + numDeaths > 0) {
-		str += 'Win Percent: ' + gs.toPercentStr(numWins / (numWins + numDeaths)) + '\n';
+		str += '通关比例: ' + gs.toPercentStr(numWins / (numWins + numDeaths)) + '\n';
 	}
 	
 	// FASTEST_TIME:
@@ -136,17 +136,17 @@ UIRecordMenu.prototype.refresh = function () {
 	// WIN_STREAK:
 	if (this.selectedClass === 'All') {
 		if (gs.highestWinStreak() > 1) {
-			str += 'Best Win Streak: ' + gs.highestWinStreak() + ' - ' + gs.highestWinStreakClass() +'\n';
+			str += '最佳连胜次数: ' + gs.highestWinStreak() + ' - ' + gs.highestWinStreakClass() +'\n';
 		}
 	}
 	else if (this.selectedClass === 'Challenge') {
 		if (gs.bestChallengeWinStreak() > 1) {
-			str += 'Best Win Streak: ' + gs.bestChallengeWinStreak() + '\n';
+			str += '最佳连胜次数: ' + gs.bestChallengeWinStreak() + '\n';
 		}
 	}
 	else {
 		if (gs.bestWinStreakWithClass(this.selectedClass) > 1) {
-			str += 'Best Win Streak: ' + gs.bestWinStreakWithClass(this.selectedClass) + '\n';
+			str += '最佳连胜次数: ' + gs.bestWinStreakWithClass(this.selectedClass) + '\n';
 		}
 	}
 	str += '\n';

@@ -62,7 +62,7 @@ function HUD() {
 	}
 	
 	// Gold:
-	this.goldText = gs.createText(startX + 6, 430 + y, 'Gold: ', LARGE_WHITE_FONT, this.group);
+	this.goldText = gs.createText(startX + 6, 430 + y, '金币: ', LARGE_WHITE_FONT, this.group);
 	
 	
 	
@@ -132,7 +132,7 @@ HUD.prototype.refresh = function () {
 	this.quickWeaponSlot.refresh();
 	this.updateSlotSelectors();
 	
-	this.goldText.setText('GOLD: ' + gs.pc.inventory.gold + '  KEYS: ' + gs.pc.inventory.keys);
+	this.goldText.setText('金币: ' + gs.pc.inventory.gold + '  钥匙: ' + gs.pc.inventory.keys);
 
 
 	// Chat Log:
