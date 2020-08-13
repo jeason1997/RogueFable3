@@ -13,8 +13,8 @@ gs.createPlayerRaces = function () {
 		
 	};
 	this.playerRaces.Human.desc = function () {
-		var str = 'Human\n';
-		str += 'Medium Size';
+		var str = '人类\n';
+		str += '中等身材';
 		return str;
 	};
 	
@@ -28,11 +28,11 @@ gs.createPlayerRaces = function () {
 		character.size += 1;
 	};
 	this.playerRaces.Ogre.desc = function () {
-		var str = 'Ogre\n';
-		str += 'Large Size\n';
-		str += '+3 Strength\n';
-		str += '-3 Intelligence\n';
-		str += 'Slow Movement speed (cannot move diagonally)';
+		var str = '兽人\n';
+		str += '高大身材\n';
+		str += '+3 力量\n';
+		str += '-3 智力\n';
+		str += '移动速度慢（不能斜向移动）';
 		
 		return str;
 	};
@@ -45,11 +45,11 @@ gs.createPlayerRaces = function () {
 		character.resistance.Fire -= 1;
 	};
 	this.playerRaces.Troll.desc = function () {
-		var str = 'Troll\n';
-		str += 'Medium Size\n';
-		str += '-3 Intelligence\n';
-		str += '-50% Fire Resistance\n';
-		str += 'Double regen speed';
+		var str = '巨魔\n';
+		str += '中等身材\n';
+		str += '-3 智力\n';
+		str += '-50% 火焰抗性\n';
+		str += '两倍的恢复速度';
 		return str;
 	};
 	
@@ -60,12 +60,12 @@ gs.createPlayerRaces = function () {
 		character.resistance.Toxic += 1;
 	};
 	this.playerRaces.Mummy.desc = function () {
-		var str = 'Mummy\n';
-		str += 'Medium Size\n';
-		str += 'No hunger\n';
-		str += '-50% Fire Resistance\n';
-		str += '+50% Toxic Resistance\n';
-		str += 'Cannot consume potions or food';
+		var str = '木乃伊\n';
+		str += '中等身材\n';
+		str += '不会饥饿\n';
+		str += '-50% 火焰抗性\n';
+		str += '+50% 毒抗性\n';
+		str += '不能吃药水或者食物';
 		return str;
 	};
 	
@@ -76,11 +76,11 @@ gs.createPlayerRaces = function () {
 		character.strength -= 3;
 	};
 	this.playerRaces.Elf.desc = function () {
-		var str = 'Elf\n';
-		str += 'Medium Size\n';
-		str += '+3 Dexterity\n';
-		str += '-3 Strength\n';
-		str += 'No min range for bows';
+		var str = '精灵\n';
+		str += '中等身材\n';
+		str += '+3 敏捷\n';
+		str += '-3 力量\n';
+		str += '弓箭没有最小射程';
 		return str;
 	};
 	
@@ -92,10 +92,10 @@ gs.createPlayerRaces = function () {
 		character.size -= 1;
 	};
 	this.playerRaces.Gnome.desc = function () {
-		var str = 'Gnome\n';
-		str += 'Small Size\n';
-		str += '+3 Intelligence\n';
-		str += '-3 Strength';
+		var str = '侏儒\n';
+		str += '矮小身材\n';
+		str += '+3 智力\n';
+		str += '-3 力量';
 		return str;
 	};
 	
@@ -105,11 +105,11 @@ gs.createPlayerRaces = function () {
 		character.isFlying += 1;
 	};
 	this.playerRaces.Gargoyle.desc = function () {
-		var str = 'Gargoyle\n';
-		str += 'Medium Size\n';
-		str += 'Flying\n';
-		str += 'No HP/MP regen\n';
-		str += 'HP/MP will be restored when descending to a new level.';
+		var str = '石像鬼\n';
+		str += '中等身材\n';
+		str += '可以飞行\n';
+		str += '生命值/法力值 不会自动恢复\n';
+		str += '生命值/法力值 将在进入下一层时恢复';
 		return str;
 	};
 	this.playerRaces.Gargoyle.talents = ['StoneSkin'];

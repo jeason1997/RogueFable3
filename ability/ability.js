@@ -333,33 +333,33 @@ gs.abilityDesc = function (ability, item) {
 			str += charm.toShortDesc() + '\n';
 		}
 		else {	
-			str += ability.type.niceName + '\n';
+			str += translator.getText(ability.type.niceName) + '\n';
 		}
 	}
 	
 	// Sustained:
 	if (ability.type.isSustained) {
-		str += 'Sustained Effect' + '\n';
+		str += '持续效果' + '\n';
 	}
 	
 	// Mana:
 	if (ability.type.mana) {
-		str += 'Mana: ' + gs.pc.manaCost(ability.type) + '\n';
+		str += '消耗法力值: ' + gs.pc.manaCost(ability.type) + '\n';
 	}
 	
 	// Hit Points:
 	if (ability.type.hitPointCost) {
-		str += 'Hit Points: ' + ability.type.hitPointCost + '\n';
+		str += '消耗生命值: ' + ability.type.hitPointCost + '\n';
 	}
 	
 	// Cool Down:
 	if (ability.type.coolDown) {
-		str += 'Cool Down: ' + ability.type.coolDown + '\n';
+		str += '冷却: ' + ability.type.coolDown + '\n';
 	}
 	
 	// Charges on Charm:
 	if (charm) {
-		str += 'Charges: ' + charm.charges + '/' + charm.getModdedStat('maxCharges');
+		str += '蓄力: ' + charm.charges + '/' + charm.getModdedStat('maxCharges');
 		
 		// Showing recharge:
 		if (charm.charges < charm.getModdedStat('maxCharges')) {
@@ -373,7 +373,7 @@ gs.abilityDesc = function (ability, item) {
 	// Attributes:
 	if (ability.type.attributes) {
 		this.forEachType(ability.type.attributes, function (attribute) {
-			str += gs.capitalSplit(attribute.name) + ': ';
+			str += translator.getText(attribute.name) + ': ';
 
 			// Wands and Charm attributes (just show the final modified stat):
 			if (item || charm) {

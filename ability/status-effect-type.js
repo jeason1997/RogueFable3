@@ -82,7 +82,7 @@ StatusEffectType.prototype.toData = function () {
 // The short name + duration that shows up on the HUD
 // ************************************************************************************************
 StatusEffectType.prototype.toShortDesc = function () {
-	var str = gs.capitalSplit(this.name);
+	var str = translator.getText(this.name);
 	
 	if (this.duration > 1 && !this.noDuration) {
 		str += ': ' + this.duration;
@@ -95,10 +95,10 @@ StatusEffectType.prototype.toShortDesc = function () {
 // Fills the players chat box when mousing over the status effect.
 // ************************************************************************************************
 StatusEffectType.prototype.toLongDesc = function () {
-	var str = gs.capitalSplit(this.name) + ':\n';
+	var str = translator.getText(this.name) + ':\n';
 	
 	if (this.duration > 1 && !this.noDuration) {
-		str += 'Duration: ' + this.duration + '\n';
+		str += '持续回合: ' + this.duration + '\n';
 	}
 	
 	str += this.desc;
@@ -182,7 +182,7 @@ gs.createStatusEffectTypes = function () {
 	};
 	this.statusEffectTypes.Wet.noDuration = true;
 	this.statusEffectTypes.Wet.dontPopUpText = true;
-	this.statusEffectTypes.Wet.desc = 'You will take double damage from all electric attacks and half damage from fire.';
+	this.statusEffectTypes.Wet.desc = '你受到的火属性伤害减半，同时电属性伤害增倍。';
 	
 	// FLAMMABLE:
 	// ********************************************************************************************
@@ -204,7 +204,7 @@ gs.createStatusEffectTypes = function () {
 	this.statusEffectTypes.Unstable.noDuration = true;
 	this.statusEffectTypes.Unstable.addDuration = false;
 	this.statusEffectTypes.Unstable.dontPopUpText = true;
-	this.statusEffectTypes.Unstable.desc = 'Your unstable footing will cause you to be critically hit by all physical attacks.';
+	this.statusEffectTypes.Unstable.desc = '你不稳定的立足点会导致你受到所有\n物理攻击的致命一击。';
 	
 	// IMMOBILE:
 	// ********************************************************************************************

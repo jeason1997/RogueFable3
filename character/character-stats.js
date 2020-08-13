@@ -448,76 +448,74 @@ PlayerCharacter.prototype.getStatDesc = function (tag) {
 	
 	if (tag === 'Strength') {
 		str += '力量:\n';
-		str += '每超过10点力量，便获得+2HP和+1近战力量。';
+		str += '超过10点力量后，\n每增加一点力量便获得+2生命和+1近战威力。';
 	}
 	else if (tag === 'Dexterity') {
 		str += '敏捷:\n';
-		str += '每超过10点敏捷，便获得+1隐形和+1远程力量。\n';
-		str += 'You will also gain +1 Evasion for every 2 points of dexterity.';
+		str += '超过10点敏捷后，\n每增加一点敏捷便获得+1潜行和+1远程威力。\n';
+		str += '同时每获得2点敏捷将增加+1闪避。';
 	}
 	else if (tag === 'Intelligence') {
 		str += '智力:\n';
-		str += 'Each point of intelligence over 10 gives +1 MP and +1 Spell Power.';
+		str += '超过10点智力后，\n每增加一点智力便获得+1法力值和+1法术威力。';
 	}
 	else if (tag === 'Protection') {
 		str += '守护:\n';
 		
 		if (this.protection > 0) {
-			str += '每次受到物理攻击时，\n护甲将使物理伤害降低 0 - ' + this.protection + ' 点。';
+			str += '每次受到物理攻击时，\n护甲将使物理伤害降低0-' + this.protection + '点。';
 		}
 		else {
 			str += '每次受到物理攻击时，护甲将使物理伤害降低0点。';
 		}
 	}
 	else if (tag === 'Evasion') {
-		str += 'Evasion:\n';
-		str += 'Each point of evasion gives you a ' + gs.toPercentStr(EVASION_PERCENT_PER_POINT) + ' chance to dodge melee and projectile attacks';
-		str += ' up to a max of ' + gs.toPercentStr(MAX_EVASION_PERCENT) + '\n';
-		str += 'Your evasion is giving you a ' + gs.toPercentStr(this.dodgePercent()) + ' chance to dodge.';
+		str += '闪避:\n';
+		str += '每一点闪避使你有' + gs.toPercentStr(EVASION_PERCENT_PER_POINT) + '的概率闪避近战和投射攻击，\n最多累积到' + gs.toPercentStr(MAX_EVASION_PERCENT) + '。\n';
+		str += '你当前的闪避给你' + gs.toPercentStr(this.dodgePercent()) + '的闪避概率。';
 	}
 	else if (tag === 'Reflection') {
-		str += 'Reflection:\n';
-		str += 'Each point of reflection gives you a ' + gs.toPercentStr(REFLECTION_PERCENT_PER_POINT) + ' chance to reflect projectile attacks';
-		str += ' up to a max of ' + gs.toPercentStr(MAX_REFLECTION_PERCENT) + '\n';
-		str += 'Your reflection is giving you a ' + gs.toPercentStr(this.reflectPercent()) + ' chance to reflect.';
+		str += '反射:\n';
+		str += '每一点反射使你用' + gs.toPercentStr(REFLECTION_PERCENT_PER_POINT) + '的概率反射投射攻击，\n最多累积到' + gs.toPercentStr(MAX_REFLECTION_PERCENT) + '。\n';
+		str += '你当前的反射给你' + gs.toPercentStr(this.reflectPercent()) + '的反射概率。';
 	}
 	else if (tag === 'Stealth') {
-		str += 'Stealth:\n';
-		str += 'Decreases the chance that unaware monsters will spot you. ';
-		str += 'Each point of stealth will increase the damage of all critical hits by ' + gs.toPercentStr(CRIT_PERCENT_PER_STEALTH) + '.';
+		str += '潜行:\n';
+		str += '降低未察觉的怪物发现你的几率。\n';
+		str += '每一点潜行值将增' + gs.toPercentStr(CRIT_PERCENT_PER_STEALTH) + '的暴击伤害。';
 	}
 	else if (tag === 'FireResistance') {
-		str += 'Fire Resistance:\n';
-		str += 'Gives you a chance to resist ' + gs.toPercentStr(RESISTANCE_MULTIPLIER[this.resistance.Fire] / 2) + ' of all fire damage.';
+		str += '火抗性:\n';
+		str += '使你有机会抵抗' + gs.toPercentStr(RESISTANCE_MULTIPLIER[this.resistance.Fire] / 2) + '点火焰伤害。';
 	}
 	else if (tag === 'ColdResistance') {
-		str += 'Cold Resistance:\n';
-		str += 'Gives you a chance to resist ' + gs.toPercentStr(RESISTANCE_MULTIPLIER[this.resistance.Cold] / 2) + ' of all cold damage.';
+		str += '冰抗性:\n';
+		str += '使你有机会抵抗' + gs.toPercentStr(RESISTANCE_MULTIPLIER[this.resistance.Cold] / 2) + '点冰冻伤害。';
 	}
 	else if (tag === 'ShockResistance') {
-		str += 'Shock Resistance:\n';
-		str += 'Gives you a chance to resist ' + gs.toPercentStr(RESISTANCE_MULTIPLIER[this.resistance.Shock] / 2) + ' of all shock damage.';
+		str += '电抗性:\n';
+		str += '使你有机会抵抗' + gs.toPercentStr(RESISTANCE_MULTIPLIER[this.resistance.Shock] / 2) + '点电击伤害。';
 	}
 	else if (tag === 'ToxicResistance') {
-		str += 'Toxic Resistance:\n';
-		str += 'Gives you a chance to resist ' + gs.toPercentStr(RESISTANCE_MULTIPLIER[this.resistance.Toxic] / 2) + ' of all toxic damage.';
+		str += '毒抗性:\n';
+		str += '使你有机会抵抗' + gs.toPercentStr(RESISTANCE_MULTIPLIER[this.resistance.Toxic] / 2) + '点毒伤害。';
 	}
 	else if (tag === 'MeleePower') {
-		str += 'Melee Power:\n';
-		str += 'Each point of melee power increases your melee damage by 5%.\n';
-		str += 'Your melee power is giving you a +' + gs.toPercentStr(this.meleeDamageMultiplier - 1) + ' modifier to melee damage.';
+		str += '近战威力:\n';
+		str += '每点近战威力增加你5%的近战伤害。\n';
+		str += '你当前的近战威力使你获得+' + gs.toPercentStr(this.meleeDamageMultiplier - 1) + '近战伤害修正值。';
 		
 	}
 	else if (tag === 'RangePower') {
-		str += 'Range Power:\n';
-		str += 'Each point of range power increases your range damage by 5% with bows, slings and thrown weapons.\n';
-		str += 'Your range power is giving you a +' + gs.toPercentStr(this.rangeDamageMultiplier - 1) + ' modifier to range damage.';
+		str += '远程威力:\n';
+		str += '每一点远程威力增加弓箭、投石器和\n投掷武器5%的射程伤害。\n';
+		str += '你当前的远程威力使你获得+' + gs.toPercentStr(this.rangeDamageMultiplier - 1) + '远程伤害修正值。';
 		
 	}
 	else if (tag === 'SpellPower') {
-		str += 'Spell Power:\n';
-		str += 'Each point of spell power increases the damage, duration etc. of all spells by 5%.\n';
-		str += 'Your spell power is giving you a +' + gs.toPercentStr(this.spellDamageMultiplier - 1) + ' modifier to all spells.';
+		str += '法术威力:\n';
+		str += '每一点法术威力提高5%的法术的伤害、持续时间。\n';
+		str += '你当前的法术威力使你获得+' + gs.toPercentStr(this.spellDamageMultiplier - 1) + '法术伤害修正值。';
 	}
 	else if (tag === 'FirePower') {
 		str += 'Fire Power:\n';

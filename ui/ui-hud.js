@@ -242,17 +242,17 @@ HUD.prototype.refreshDebugText = function () {
 HUD.prototype.refreshBars = function () {
 	// Update Text:
 	
-	this.hpBar.setText('HP: ' + gs.pc.currentHp + '/' + gs.pc.maxHp);
-	this.mpBar.setText('MP: ' + gs.pc.currentMp + '/' + gs.pc.maxMp);
-	this.foodBar.setText('FD: ' + gs.pc.currentFood + '/' + gs.pc.maxFood);
-	this.coldBar.setText('COLD: ' + gs.pc.coldLevel + '/' + MAX_COLD_LEVEL);
-	this.rageBar.setText('RAGE: ' + gs.pc.rage + '/' + gs.pc.maxRage);
+	this.hpBar.setText('生命值: ' + gs.pc.currentHp + '/' + gs.pc.maxHp);
+	this.mpBar.setText('法力值: ' + gs.pc.currentMp + '/' + gs.pc.maxMp);
+	this.foodBar.setText('饥饿值: ' + gs.pc.currentFood + '/' + gs.pc.maxFood);
+	this.coldBar.setText('寒冷: ' + gs.pc.coldLevel + '/' + MAX_COLD_LEVEL);
+	this.rageBar.setText('愤怒: ' + gs.pc.rage + '/' + gs.pc.maxRage);
 	
 	if (gs.pc.level < MAX_LEVEL) {
-		this.expBar.setText('LVL: ' + gs.pc.level + ' ['+ gs.pc.expPercent() + '%]');
+		this.expBar.setText('等级: ' + gs.pc.level + ' ['+ gs.pc.expPercent() + '%]');
 	}
 	else {
-		this.expBar.setText('LVL: ' + gs.pc.level);
+		this.expBar.setText('等级: ' + gs.pc.level);
 	}
 	
 	// Update Bars:
@@ -352,7 +352,7 @@ HUD.prototype.refreshStatusEffects = function () {
 HUD.prototype.refreshZoneTitle = function () {
 	var str;
 	
-	str = gs.capitalSplit(gs.zoneName) + ': ' + gs.niceZoneLevel(gs.zoneName, gs.zoneLevel);
+	str = translator.getText(gs.zoneName) + ': ' + gs.niceZoneLevel(gs.zoneName, gs.zoneLevel);
 	
 	if (gs.inArray(gs.zoneName, ['TheUpperDungeon', 'VaultOfYendor'].concat(TIER_II_ZONES).concat(TIER_III_ZONES))) {
 		str += '/16';
@@ -522,7 +522,7 @@ HUD.prototype.getDescUnderPointer = function () {
 			return gs.pc.inventory.quickWeaponSlot.item.toLongDesc();
 		}
 		else {
-			return 'Quick Weapon Slot:\nPlace a weapon here to use when right clicking.';
+			return '快速武器槽:\n放置武器在此处，右键使用攻击。';
 		}
 		
 	}

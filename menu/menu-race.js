@@ -35,7 +35,7 @@ function RaceSelectMenu () {
 	this.raceButtons = [];
 	gs.playerRaceList.forEach(function (playerRace, i) {
 		var button;
-		button = gs.createTextButton(startX + width / 2, 50 + i * iconSpaceY, playerRace.name, this.raceClicked, this, this.group);
+		button = gs.createTextButton(startX + width / 2, 50 + i * iconSpaceY, translator.getText(playerRace.name), this.raceClicked, this, this.group);
 		button.button.playerRace = playerRace;
 		this.raceButtons.push(button);
 	}, this);

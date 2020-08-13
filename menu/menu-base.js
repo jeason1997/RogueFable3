@@ -23,10 +23,10 @@ function MainMenuBase () {
 	gs.createSprite(120, 10, 'Title', this.group);
 	
 	// Version Text:
-	this.versionText = gs.createText(4, 0, 'Version: ' + gs.versionStr, SMALL_WHITE_FONT, this.group);
+	this.versionText = gs.createText(4, 0, '版本: ' + gs.versionStr, SMALL_WHITE_FONT, this.group);
 	
 	// Credits Text:
-	this.creditsText = gs.createText(4, SCREEN_HEIGHT, '程序及美术: Justin Wang\n音效: www.kenney.nl and ArtisticDude\n音乐: Nooskewl Games', SMALL_WHITE_FONT, this.group);
+	this.creditsText = gs.createText(4, SCREEN_HEIGHT, '汉化: Jeason1997\n程序及美术: Justin Wang\n音效: www.kenney.nl 和 ArtisticDude\n音乐: Nooskewl Games', SMALL_WHITE_FONT, this.group);
 	this.creditsText.anchor.setTo(0, 1);
 	
 	// User Name Text:

@@ -67,7 +67,7 @@ UICharacterMenu.prototype.refreshSkillPanel = function () {
 	this.skillPointText.setText('技能点: ' + gs.pc.skillPoints);
 	
 	SKILL_NAMES.forEach(function (skillName, i) {
-		this.skillButtonList.buttons[i].text.setText(gs.capitalSplit(skillName));
+		this.skillButtonList.buttons[i].text.setText(translator.getText(skillName));
 		this.skillButtonList.buttons[i].numText.setText(gs.pc.skills[skillName] + '/' + MAX_SKILL);
 		this.skillButtonList.buttons[i].button.skillName = skillName;
 	}, this);
@@ -82,8 +82,8 @@ UICharacterMenu.prototype.createTalentPanel = function (startX, startY) {
 	this.talentPointText = gs.createText(startX + 60, startY + 4, '天赋点', LARGE_WHITE_FONT, this.group);
 	//gs.centerText(this.talentPointText);
 	
-	gs.createText(startX - 80, startY + 30, 'Known Talents', LARGE_WHITE_FONT, this.group);
-	gs.createText(startX + 210, startY + 30, 'Available Talents', LARGE_WHITE_FONT, this.group);
+	gs.createText(startX - 80, startY + 30, '已学天赋', LARGE_WHITE_FONT, this.group);
+	gs.createText(startX + 210, startY + 30, '可学天赋', LARGE_WHITE_FONT, this.group);
 	
 	this.talentButtonList = new UITextButtonList(startX, startY + 66, 10, this.group, this, this.talentClicked);
 	this.availableTalentButtonList = new UITextButtonList(startX + 300, startY + 66, 10, this.group, this, this.talentClicked);
@@ -103,7 +103,7 @@ UICharacterMenu.prototype.refreshTalentPanel = function () {
 			let talentName = gs.pc.talents[this.talentButtonList.startIndex + i].type.name;
 			
 			this.talentButtonList.buttons[i].button.talentName = talentName;
-			this.talentButtonList.buttons[i].text.setText(gs.capitalSplit(talentName));
+			this.talentButtonList.buttons[i].text.setText(translator.getText(talentName));
 			this.talentButtonList.buttons[i].numText.setText(gs.pc.getTalent(talentName).level + '/' + gs.talents[talentName].level.length);
 			this.talentButtonList.buttons[i].group.visible = true;
 			
@@ -255,9 +255,9 @@ UICharacterMenu.prototype.refreshStats = function () {
 	
 	this.statList = [];
 	
-	this.statList.push({name: '职业:',			val: gs.capitalSplit(gs.pc.characterClass), tag: 'Class'});
-	this.statList.push({name: '种族:',			val: gs.capitalSplit(gs.pc.race.name), tag: 'Race'});
-	this.statList.push({name: 'God:',			val: (gs.pc.religion ? gs.capitalSplit(gs.pc.religion) : 'None'), tag: 'Religion'});
+	this.statList.push({name: '职业:',			val: translator.getText(gs.pc.characterClass), tag: 'Class'});
+	this.statList.push({name: '种族:',			val: translator.getText(gs.pc.race.name), tag: 'Race'});
+	this.statList.push({name: '宗教信仰:',			val: (gs.pc.religion ? gs.capitalSplit(gs.pc.religion) : '无'), tag: 'Religion'});
 	this.statList.push({name: '生命值:',	val: gs.pc.currentHp + '/' + gs.pc.maxHp});
 	this.statList.push({name: '法力值:',	val: gs.pc.currentMp + '/' + gs.pc.maxMp});
 	this.statList.push({name: '饥饿值:',			val: gs.pc.currentFood + '/' + gs.pc.maxFood});
@@ -272,25 +272,25 @@ UICharacterMenu.prototype.refreshStats = function () {
 	
 	this.statList.push({name: '防御:',		val: ''});
 	this.statList.push({name: '守护:',	val: gs.pc.protection, tag: 'Protection'});
-	this.statList.push({name: '回避:',		val: gs.pc.evasion, tag: 'Evasion'});
+	this.statList.push({name: '闪避:',		val: gs.pc.evasion, tag: 'Evasion'});
 	this.statList.push({name: '反射:',	val: gs.pc.reflection, tag: 'Reflection'});
-	this.statList.push({name: '隐身:',		val: gs.pc.stealth, tag: 'Stealth'});
+	this.statList.push({name: '潜行:',		val: gs.pc.stealth, tag: 'Stealth'});
 	this.statList.push({name: '',				val: ''});
 	
 	this.statList.push({name: '抗性:',	val: ''});
 	this.statList.push({name: '火抗性:',			val: gs.pc.resistance.Fire, tag: 'FireResistance'});
 	this.statList.push({name: '冰抗性:',			val: gs.pc.resistance.Cold, tag: 'ColdResistance'});
-	this.statList.push({name: 'Shock:',			val: gs.pc.resistance.Shock, tag: 'ShockResistance'});
+	this.statList.push({name: '电抗性:',			val: gs.pc.resistance.Shock, tag: 'ShockResistance'});
 	this.statList.push({name: '毒抗性:',			val: gs.pc.resistance.Toxic, tag: 'ToxicResistance'});
 	this.statList.push({name: '',				val: ''});
 	
-	this.statList.push({name: '战斗:',		val: ''});
-	this.statList.push({name: '近战:',			val: gs.pc.meleePower, tag: 'MeleePower'});
-	this.statList.push({name: '远程:',			val: gs.pc.rangePower, tag: 'RangePower'});
+	this.statList.push({name: '物理:',		val: ''});
+	this.statList.push({name: '近战威力:',			val: gs.pc.meleePower, tag: 'MeleePower'});
+	this.statList.push({name: '远程威力:',			val: gs.pc.rangePower, tag: 'RangePower'});
 	this.statList.push({name: '',				val: ''});
 	
-	this.statList.push({name: 'MAGIC POWER:',	val: ''});
-	this.statList.push({name: 'Spell:',			val: gs.pc.spellPower, tag: 'SpellPower'});
+	this.statList.push({name: '法术:',	val: ''});
+	this.statList.push({name: '法术威力:',			val: gs.pc.spellPower, tag: 'SpellPower'});
 	
 	if (gs.pc.firePower !== gs.pc.spellPower) {
 		this.statList.push({name: 'Fire:', val: gs.pc.firePower, tag: 'FirePower'});

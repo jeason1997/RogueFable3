@@ -211,7 +211,7 @@ gs.createTalentDesc = function () {
 			return '';
 		}
 	};	
-	this.talents.FireBall.desc = 			'Shoots a ball of fire which explodes, damaging monsters and setting fire to flammable objects.';
+	this.talents.FireBall.desc = 			'发射一个会爆炸的火球，伤害怪物并点燃可燃物。';
 	this.talents.FireAttunement.desc = 		'Increases your fire magic power and reduces fire magic mana cost by 1MP for the duration of the effect.';
 	this.talents.BurstOfFlame.desc = 		'Creates a burst of flame on a single tile. Will create a large burst if used on a torch or other flaming object.';
 	this.talents.InfernoOrb.desc = 			'Summons a slow moving fire ball which bursts upon impact in a powerful explosion.';
@@ -582,7 +582,7 @@ gs.getTalentDescription = function (talentName) {
 	
 	// Mastered:
 	if (gs.pc.getTalentLevel(talentName) === talent.level.length) {
-		str += 'Mastered ' + gs.capitalSplit(talentName) + '\n';
+		str += '精通 ' + translator.getText(talentName) + '\n';
 		baseLevel = gs.pc.getTalentLevel(talentName);
 		upgrading = false;
 	}
@@ -590,20 +590,20 @@ gs.getTalentDescription = function (talentName) {
 	else if (gs.pc.getTalentLevel(talentName)) {
 		baseLevel = gs.pc.getTalentLevel(talentName);
 		
-		str += 'Learn ' + gs.capitalSplit(talentName) + ' ' + (baseLevel + 1) + '\n';
+		str += '学习 ' + translator.getText(talentName) + (baseLevel + 1) + '\n';
 		
 		upgrading = true;
 	}
 	// Learning for first time:
 	else {
-		str += 'Learn ' + gs.capitalSplit(talentName) + '\n';
+		str += '学习 ' + translator.getText(talentName) + '\n';
 		baseLevel = 1;
 		upgrading = false;
 	}
 	
 	// Required Level:
 	if (gs.pc.getTalentLevel(talentName) < talent.level.length) {
-		str += 'Required Level: ' + talent.level[gs.pc.getTalentLevel(talentName)] + '\n';
+		str += '学习需求等级: ' + talent.level[gs.pc.getTalentLevel(talentName)] + '\n';
 	}
 	
 	
@@ -612,28 +612,28 @@ gs.getTalentDescription = function (talentName) {
 	if (talent.ability) {
 		// Sustained:
 		if (talent.ability.isSustained) {
-			str += 'Sustained Effect' + '\n';
+			str += '持续效果' + '\n';
 		}
 		
 		// Mana:
 		if (talent.ability.mana) {
-			str += 'Mana: ' + talent.ability.mana + '\n';
+			str += '消耗法力值: ' + talent.ability.mana + '\n';
 		}
 		
 		// Hit Point Cost:
 		if (talent.ability.hitPointCost) {
-			str += 'Hit Points: ' + talent.ability.hitPointCost + '\n';
+			str += '消耗生命值: ' + talent.ability.hitPointCost + '\n';
 		}
 		
 		// Cool Down:
 		if (talent.ability.coolDown) {
-			str += 'Cooldown: ' + talent.ability.coolDown + '\n';
+			str += '冷却回合: ' + talent.ability.coolDown + '\n';
 		}
 		
 		// Attributes:
 		if (talent.ability.attributes) {
 			this.forEachType(talent.ability.attributes, function (attribute) {
-				str += this.capitalSplit(attribute.name) + ': ';
+				str += translator.getText(attribute.name) + ': ';
 				
 				if (upgrading && attribute.base[baseLevel] !== attribute.base[baseLevel + 1]) {
 					str += attribute.base[baseLevel] + ' -> ' + attribute.base[baseLevel + 1] + '\n';

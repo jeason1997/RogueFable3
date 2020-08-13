@@ -105,7 +105,7 @@ ClassSelectMenu.prototype.createClassPanel = function (x, y, className) {
 	classPanel.image.frame = PLAYER_FRAMES[className];
 
 	// Class Name Text:
-	str = gs.capitalSplit(className);
+	str = translator.getText(className);
 	if (gs.achievements[className] > 0) {
 		str += ' [' + gs.timeToString(gs.achievements[className]) + ']';
 	}

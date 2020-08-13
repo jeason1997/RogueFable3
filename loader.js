@@ -140,14 +140,14 @@ loader.create = function () {
 // LOAD_START
 // ************************************************************************************************
 loader.loadStart = function () {
-	this.text.setText("Loading ...");
+	this.text.setText("加载中 ...");
 };
 
 // FILE_COMPLETE:
 // Called each time a file is completed loading
 // ************************************************************************************************
 loader.fileComplete = function (progress, cacheKey, success, totalLoaded, totalFiles) {
-	this.text.setText('Loading: ' + progress + "%");
+	this.text.setText('加载中: ' + progress + "%");
 	gs.centerText(this.text);
 };
 
