@@ -447,26 +447,26 @@ PlayerCharacter.prototype.getStatDesc = function (tag) {
 	var str = '';
 	
 	if (tag === 'Strength') {
-		str += 'Strength:\n';
-		str += 'Each point of strength over 10 gives +2 HP and +1 Melee Power.';
+		str += '力量:\n';
+		str += '每超过10点力量，便获得+2HP和+1近战力量。';
 	}
 	else if (tag === 'Dexterity') {
-		str += 'Dexterity:\n';
-		str += 'Each point of dexterity over 10 gives +1 Stealth and +1 Range Power.\n';
+		str += '敏捷:\n';
+		str += '每超过10点敏捷，便获得+1隐形和+1远程力量。\n';
 		str += 'You will also gain +1 Evasion for every 2 points of dexterity.';
 	}
 	else if (tag === 'Intelligence') {
-		str += 'Intelligence:\n';
+		str += '智力:\n';
 		str += 'Each point of intelligence over 10 gives +1 MP and +1 Spell Power.';
 	}
 	else if (tag === 'Protection') {
-		str += 'Protection:\n';
+		str += '守护:\n';
 		
 		if (this.protection > 0) {
-			str += 'Your armor will reduce physical damage by 0 - ' + this.protection + ' points every time you are hit by a physical attack.';
+			str += '每次受到物理攻击时，\n护甲将使物理伤害降低 0 - ' + this.protection + ' 点。';
 		}
 		else {
-			str += 'Your armor will reduce physical damage by 0 points every time you are hit by a physical attack.';
+			str += '每次受到物理攻击时，护甲将使物理伤害降低0点。';
 		}
 	}
 	else if (tag === 'Evasion') {

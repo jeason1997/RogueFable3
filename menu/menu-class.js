@@ -147,18 +147,18 @@ ClassSelectMenu.prototype.update = function () {
 	this.classPanelList.forEach(function (panel) {
 		// Set Achievement Text:
 		if (panel.achievementIcons[0].input.checkPointerOver(game.input.activePointer)) {
-			str = 'Win for the first time.';
+			str = '首次胜利。';
 		}
 		if (panel.achievementIcons[1].input.checkPointerOver(game.input.activePointer)) {
-			str = 'Win in under 60 minutes.';
+			str = '在60分钟内获胜。';
 		}
 		if (panel.achievementIcons[2].input.checkPointerOver(game.input.activePointer)) {
-			str = 'Win in under 45 minutes.';
+			str = '在45分钟内获胜。';
 		}
 		
 		// Set Class Text:
 		if (panel.button.input.checkPointerOver(game.input.activePointer)) {
-			str = gs.capitalSplit(panel.button.className);
+			str = translator.getText(panel.button.className);
 			
 			if (panel.button.className === 'Barbarian') {
 				str += '\n杀死敌人时，能力会冷却。';

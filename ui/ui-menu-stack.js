@@ -23,7 +23,7 @@ gs.openDeathMenu = function () {
 		deathText,
 		charClicked;
 	
-	deathText = 'Your level ' + gs.pc.level + ' ' + gs.capitalSplit(gs.pc.characterClass) + ' ' + gs.deathText + ' in the ' + gs.capitalSplit(gs.zoneName) + '.';
+	deathText = '你的' + gs.pc.level + '级' + translator.getText(gs.pc.characterClass) + '在' + translator.getText(gs.zoneName) + gs.deathText + '。';
 	
 	respawnClicked = function () {
 		gs.pc.healHp(1000);
@@ -46,8 +46,8 @@ gs.openDeathMenu = function () {
 	dialog[0].text = deathText;
 	dialog[0].responses = [
 		{text: 'Instant Respawn (Testing)', nextLine: 'exit', prereq: function () {return gs.debugProperties.allowRespawn; }, func: respawnClicked},
-		{text: 'View Character', nextLine: 'exit', func: charClicked},
-		{text: 'Main Menu', nextLine: 'exit', func: mainMenuClicked}
+		{text: '查看角色', nextLine: 'exit', func: charClicked},
+		{text: '主菜单', nextLine: 'exit', func: mainMenuClicked}
 	];
 	
 	
@@ -72,7 +72,7 @@ gs.openLifeSavingMenu = function () {
 	
 	// Setup Dialog:
 	dialog = [{}];
-	dialog[0].text = 'You have been killed. Your Ring of Life Saving flashes brightly and disolves, bringing you back to life.';
+	dialog[0].text = '你被杀了。你的生命之环闪烁着明亮的光芒，让你复活。';
 	dialog[0].responses = [
 		{text: 'ok', nextLine: 'exit'}
 	];
@@ -198,36 +198,36 @@ gs.openAttributeGainMenu = function () {
 	};
 	
 
-	dialog[0].text = 'Select an attribute to increase.';
+	dialog[0].text = '选择要增加的属性。';
 	dialog[0].responses = [
 		// Strength:
 		{
 			text: function () {
-				return 'Strength: ' + gs.pc.strength + ' -> ' + (gs.pc.strength + 1); 
+				return '力量: ' + gs.pc.strength + ' -> ' + (gs.pc.strength + 1); 
 			}, 
 			nextLine: 'exit', 
 			func: strFunc,
-			desc: 'Strength:\nIncreases your melee power and maximum hit points.'
+			desc: '力量:\n增加你的近战力量和最大生命值。'
 		},
 		
 		// Dexterity:
 		{
 			text: function () {
-				return 'Dexterity: ' + gs.pc.dexterity + ' -> ' + (gs.pc.dexterity + 1);
+				return '敏捷: ' + gs.pc.dexterity + ' -> ' + (gs.pc.dexterity + 1);
 			},
 			nextLine: 'exit',
 			func: dexFunc,
-			desc: 'Dexterity:\nIncreases your range power, stealth and evasion.'
+			desc: '敏捷:\n增加你的射程、潜行和闪避。'
 		},
 		
 		// Intelligence:
 		{
 			text: function () {
-				return 'Intelligence: ' + gs.pc.intelligence + ' -> ' + (gs.pc.intelligence + 1);
+				return '智力: ' + gs.pc.intelligence + ' -> ' + (gs.pc.intelligence + 1);
 			},
 			nextLine: 'exit',
 			func: intFunc,
-			desc: 'Intelligence:\nIncreases your spell power and maximum mana points.'
+			desc: '智力:\n增加你的法术力量和最高法力值。'
 		},
 	];
 	

@@ -96,7 +96,7 @@ UICharacterMenu.prototype.refreshTalentPanel = function () {
 	var i, str;
 	
 	// Talent Point Text:
-	this.talentPointText.setText('Talent Points: ' + gs.pc.talentPoints);
+	this.talentPointText.setText('天赋点: ' + gs.pc.talentPoints);
 	
 	for (let i = 0; i < this.talentButtonList.buttons.length; i += 1) {
 		if (this.talentButtonList.startIndex + i < gs.pc.talents.length) {
@@ -271,10 +271,10 @@ UICharacterMenu.prototype.refreshStats = function () {
 	this.statList.push({name: '',				val: ''});
 	
 	this.statList.push({name: '防御:',		val: ''});
-	this.statList.push({name: 'Protection:',	val: gs.pc.protection, tag: 'Protection'});
+	this.statList.push({name: '守护:',	val: gs.pc.protection, tag: 'Protection'});
 	this.statList.push({name: '回避:',		val: gs.pc.evasion, tag: 'Evasion'});
-	this.statList.push({name: 'Reflection:',	val: gs.pc.reflection, tag: 'Reflection'});
-	this.statList.push({name: 'Stealth:',		val: gs.pc.stealth, tag: 'Stealth'});
+	this.statList.push({name: '反射:',	val: gs.pc.reflection, tag: 'Reflection'});
+	this.statList.push({name: '隐身:',		val: gs.pc.stealth, tag: 'Stealth'});
 	this.statList.push({name: '',				val: ''});
 	
 	this.statList.push({name: '抗性:',	val: ''});
@@ -284,7 +284,7 @@ UICharacterMenu.prototype.refreshStats = function () {
 	this.statList.push({name: '毒抗性:',			val: gs.pc.resistance.Toxic, tag: 'ToxicResistance'});
 	this.statList.push({name: '',				val: ''});
 	
-	this.statList.push({name: 'OFFENSE:',		val: ''});
+	this.statList.push({name: '战斗:',		val: ''});
 	this.statList.push({name: '近战:',			val: gs.pc.meleePower, tag: 'MeleePower'});
 	this.statList.push({name: '远程:',			val: gs.pc.rangePower, tag: 'RangePower'});
 	this.statList.push({name: '',				val: ''});

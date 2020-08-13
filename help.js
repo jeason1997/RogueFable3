@@ -11,8 +11,8 @@ help.levelUpDialog = function () {
 	if (!gs.globalData.skills && gs.state !== 'DIALOG_MENU_STATE') {
 		// Setup Dialog:
 		dialog = [{}];
-		dialog[0].text = 'You have gained a level! You now have skill and talent points to spend. Your hit points and mana have also been restored to full.';
-		dialog[0].responses = [{text: 'Ok', nextLine: 'exit'}
+		dialog[0].text = '你已经升了一级!你现在有技能和天赋点数可以使用了。\n你的生命值和法力值也被完全恢复。';
+		dialog[0].responses = [{text: '确定', nextLine: 'exit'}
 							  ];
 
 		gs.globalData.skills = true;
@@ -29,8 +29,8 @@ help.talentDialog = function () {
 	if (!gs.globalData.talents && gs.state !== 'DIALOG_MENU_STATE') {
 		// Setup Dialog:
 		dialog = [{}];
-		dialog[0].text = 'You have gained a talent point!. You will gain a talent point every 4 levels. You began the game with a book specific to your class from which you can learn new talents. If you have found other books you can also learn talents from them. All talents have a minimum skill requirement.';
-		dialog[0].responses = [{text: 'Ok', nextLine: 'exit'}
+		dialog[0].text = '你获得了一个天赋点!每升4级你将获得一个天赋点。\n游戏开始时你有一个职业自带的天赋。\n如果你找到了天赋书，你也可以从中学到一些天赋。\n所有天赋学习时都有最低等级要求。';
+		dialog[0].responses = [{text: '确定', nextLine: 'exit'}
 							  ];
 
 		gs.globalData.talents = true;
@@ -47,8 +47,8 @@ help.itemDialog = function () {
 	if (!gs.globalData.items && gs.state !== 'DIALOG_MENU_STATE') {
 		// Setup Dialog:
 		dialog = [{}];
-		dialog[0].text = 'You have just picked up a piece of equipment, press C to open your character menu and equip it!';
-		dialog[0].responses = [{text: 'Ok', nextLine: 'exit'}
+		dialog[0].text = '你刚刚捡起一个装备，\n按C打开你的角色菜单，装备它!';
+		dialog[0].responses = [{text: '确定', nextLine: 'exit'}
 							  ];
 
 		gs.globalData.items = true;
@@ -66,8 +66,8 @@ help.bookDialog = function () {
 		
 		// Setup Dialog:
 		dialog = [{}];
-		dialog[0].text = 'You have just picked up a talent book. Press C to open your character menu and view your available talents. When you have talent points available you can choose to learn new talents from it.';
-		dialog[0].responses = [{text: 'Ok', nextLine: 'exit'}
+		dialog[0].text = '你刚刚捡起一本天赋书。\n按C打开你的角色菜单查看你可用的天赋。\n当你有天赋点可用时，你可以选择学习新的天赋。';
+		dialog[0].responses = [{text: '确定', nextLine: 'exit'}
 							  ];
 
 		gs.globalData.books = true;
@@ -85,8 +85,8 @@ help.stairsDialog = function () {
 		
 		// Setup Dialog:
 		dialog = [{}];
-		dialog[0].text = 'You have discovered a flight of stairs leading deeper into the dungeon. Use the < or > keys to descend or click the button on the HUD.';
-		dialog[0].responses = [{text: 'Ok', nextLine: 'exit'}];
+		dialog[0].text = '你发现了通往地牢更深处的一段楼梯。\n使用 < 或 > 键下楼或单击界面上的按钮。';
+		dialog[0].responses = [{text: '确定', nextLine: 'exit'}];
 
 		gs.globalData.stairs = true;
 		localStorage.setItem('globalData', JSON.stringify(gs.globalData));
@@ -103,8 +103,8 @@ help.restDialog = function () {
 		
 		// Setup Dialog:
 		dialog = [{}];
-		dialog[0].text = 'Your health is low, shift + click yourself to rest until healed.';
-		dialog[0].responses = [{text: 'Ok', nextLine: 'exit'}];
+		dialog[0].text = '你的生命值很低，按住shift并点击你自己休息直到痊愈。';
+		dialog[0].responses = [{text: '确定', nextLine: 'exit'}];
 
 		gs.globalData.rest = true;
 		localStorage.setItem('globalData', JSON.stringify(gs.globalData));
@@ -121,8 +121,8 @@ help.unsafeMoveDialog = function () {
 		
 		// Setup Dialog:
 		dialog = [{}];
-		dialog[0].text = 'There is a dangerous hazard in this tile, use shift + click to move onto hazardous terrain.';
-		dialog[0].responses = [{text: 'Ok', nextLine: 'exit'}];
+		dialog[0].text = '此图块中存在危险地区，请按住Shift并单击以移动到危险地形。';
+		dialog[0].responses = [{text: '确定', nextLine: 'exit'}];
 
 		gs.globalData.unsafeMove = true;
 		localStorage.setItem('globalData', JSON.stringify(gs.globalData));
