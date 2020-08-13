@@ -181,16 +181,16 @@ var SKILL_NAMES = [
 
 var SKILL_DESC = {
 	// Strength:
-	Melee: 'Melee Skill:\n+1 Melee Power (5% Damage).',
-	Fortitude: 'Fortitude Skill:\n+' + HP_PER_SKILL + ' hit points.',
+	Melee: '近战技能:\n+1 近战力量 (5% 伤害)。',
+	Fortitude: '坚韧技能:\n+' + HP_PER_SKILL + ' 生命值。',
 	
-	Range: 'Range Skill:\n+1 Range Power (5% Damage).',
-	Stealth: 'Stealth Skill:\n+1 stealth which decreases the chance enemies will spot you.',
-	Evasion: 'Evasion Skill:\n+1 Evasion (5% dodge chance).',
+	Range: '远程技能:\n+1 远程力量 (5% 伤害)。',
+	Stealth: '隐身技能:\n+1 隐身 减少敌人发现你的机会。',
+	Evasion: '闪避技能:\n+1 闪避 (5% 闪避几率)。',
 	
 	// Intelligence:
-	SpellCasting: 'Spell Casting Skill:\n+1 Spell Power (5% improvement).',
-	Focus: 'Focus Skill:\n+' + MP_PER_SKILL + ' mana points.',
+	SpellCasting: '施法技能:\n+1 法术力量 (5% 提高)。',
+	Focus: '专注技能:\n+' + MP_PER_SKILL + ' 法力值。',
 };
 
 // NPC BALANCE:

@@ -21,25 +21,25 @@ function UIHelpMenu() {
 	sprite.scale.setTo(SCALE_FACTOR, SCALE_FACTOR);
 	
 	// Title:
-	this.titleText = gs.createText(startX + width / 2, startY + 20, 'Controls', HUGE_WHITE_FONT, this.group);
+	this.titleText = gs.createText(startX + width / 2, startY + 20, '控制', HUGE_WHITE_FONT, this.group);
 	gs.centerText(this.titleText);
 	
 	// Help String:
-	str += "- The Num Pad keys can be used for movement\n";
-	str += "- Shift + click a tile to move into dangerous terrain\n";
-	str += "- Click your character to wait a turn.\n";
-	str += "- Shift + clicking your character will perform extended rest\n";
-	str += "- Space, Enter, NumPad 5 are hotkeys for clicking yourself\n";
-	str += "- 1, 2, 3 etc. are hotkeys for your abilities\n";
-	str += "- [a] toggle keyboard targeting mode\n";
-	str += "- [w] swap between current and previous weapon\n";
-	str += "- [tab] auto attack nearest enemy\n";
-	str += "- [q] auto attack nearest enemy with quick slot weapon\n";
-	str += "- [esc] closes menus and cancels abilities or items\n";
-	str += "- [s] to use any stairs\n";
-	str += "- [>] to use down stairs or fast travel to them\n";
-	str += "- [<] to use up stairs or fast travel to them\n";
-	str += "- [e] to auto explore\n";
+	str += "- 数字键可用于移动\n";
+	str += "- 按住Shift键并单击图块可移至危险地形\n";
+	str += "- 点击你到角色可以等待一回合\n";
+	str += "- 按住Shift键并单击您的角色将进行长时间的休息\n";
+	str += "- 空格键，Enter键，小键盘数字键5是用于单击自己的快捷键键\n";
+	str += "- 1，2，3等数字键是使用能力的快捷键\n";
+	str += "- [a] 切换键盘定位模式\n";
+	str += "- [w] 快速切换当前武器和上一把武器\n";
+	str += "- [tab] 自动攻击距离最近的敌人\n";
+	str += "- [q] 用快速槽的武器自动攻击最近的敌人\n";
+	str += "- [esc] 关闭菜单并取消使用能力或物品\n";
+	str += "- [s] 上下楼梯\n";
+	str += "- [>] 下楼梯或快速走到楼梯口\n";
+	str += "- [<] 上楼梯或快速走到楼梯口\n";
+	str += "- [e] 自动探索\n";
 	
 	// Text:
 	let lines = gs.wrapText(str, 61);

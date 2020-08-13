@@ -598,19 +598,19 @@ HUD.prototype.getItemUnderPointer = function () {
 HUD.prototype.getButtonDescUnderPointer = function () {
 	
 	if (this.characterMenuButton.input.checkPointerOver(game.input.activePointer)) {
-		return 'Open character menu\nKeyboard shortcut: C.';
+		return '打开角色菜单\n快捷键: C';
 	} 
 	else if (this.exploreButton.input.checkPointerOver(game.input.activePointer)) {
-		return 'Auto Explore\nKeyboard shortcut: E.';
+		return '自动探索\n快捷键: E';
 	} 
 	else if (this.menuButton.input.checkPointerOver(game.input.activePointer)) {
-		return 'Open game menu\nKeyboard shortcut: ESC.';
+		return '打开游戏菜单\n快捷键: ESC';
 	}
 	else if (this.downStairsButton.input.checkPointerOver(game.input.activePointer)) {
-		return 'Descend Stairs\nKeyboard shortcut: >\nThe > key Can also be used to fast travel to down stairs once discovered.';
+		return '下楼梯\n快捷键: >\n发现楼梯后也可以按 > 自动走到楼梯处并下楼';
 	}
 	else if (this.downStairsButton.input.checkPointerOver(game.input.activePointer)) {
-		return 'Ascend Stairs\nKeyboard shortcut: <\nThe < key Can also be used to fast travel to up stairs once discovered.';
+		return '上楼梯\n快捷键: <\n发现楼梯后也可以按 < 自动走到楼梯处并上楼';
 	}
 	return null;
 };

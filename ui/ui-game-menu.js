@@ -24,13 +24,13 @@ function UIGameMenu() {
 	// Buttons:
 	let spacing = 34, y = startY + 60;
 	
-	this.helpButton = 		gs.createTextButton(startX + width / 2, y + spacing * 0, 'Help', this.onHelpClicked, this, this.group);
-	this.optionsButton = 	gs.createTextButton(startX + width / 2, y + spacing * 1, 'Options', this.onOptionsClicked, this, this.group);
-	this.exitButton = 		gs.createTextButton(startX + width / 2, y + spacing * 2, 'Exit to Main Menu', this.onMainMenuClicked, this, this.group);
-	this.desktopButton =	gs.createTextButton(startX + width / 2, y + spacing * 3, 'Exit to Desktop', this.onDesktopClicked, this, this.group);	
+	this.helpButton = 		gs.createTextButton(startX + width / 2, y + spacing * 0, '帮助', this.onHelpClicked, this, this.group);
+	this.optionsButton = 	gs.createTextButton(startX + width / 2, y + spacing * 1, '设置', this.onOptionsClicked, this, this.group);
+	this.exitButton = 		gs.createTextButton(startX + width / 2, y + spacing * 2, '返回到主菜单', this.onMainMenuClicked, this, this.group);
+	this.desktopButton =	gs.createTextButton(startX + width / 2, y + spacing * 3, '返回到桌面', this.onDesktopClicked, this, this.group);	
 	
 	// Title Text:
-	this.titleText = gs.createText(startX + width / 2, startY + 20, 'GAME MENU:', HUGE_WHITE_FONT, this.group);
+	this.titleText = gs.createText(startX + width / 2, startY + 20, '游戏菜单:', HUGE_WHITE_FONT, this.group);
 	gs.centerText(this.titleText);
 
 	// Close button:
