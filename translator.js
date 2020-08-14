@@ -12,7 +12,7 @@ var dic = {
     'Warrior': '战士',
     'Barbarian': '野蛮人',
 	'Ranger': '游侠',
-	'Rogue': '流氓',
+	'Rogue': '盗贼',
 	'FireMage': '火法师',
 	'StormMage': '风暴法师',
 	'IceMage': '冰法师',
@@ -48,6 +48,9 @@ var dic = {
     'Wet': '湿透',
     'Unstable': '站不稳',
 
+    //地图
+    'TheUpperDungeon': '顶层地牢',
+
     //地砖
     'Water': '水',
     'Wall': '墙壁',
@@ -64,7 +67,6 @@ var dic = {
 
     //天赋
     'FireBall': '火球',
-    'Fire Ball': '火球',
 
     //天赋属性
     'damage': '伤害',

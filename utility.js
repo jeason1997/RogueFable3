@@ -427,6 +427,9 @@ gs.randomColor = function () {
 // CAPITAL_SPLIT:
 // ************************************************************************************************
 gs.capitalSplit = function (string) {
+	
+	return string;
+	
 	var array;
 	
 	if (!string || string.length === 0) {

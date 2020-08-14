@@ -1447,13 +1447,13 @@ PlayerCharacter.prototype.waitClicked = function () {
 			this.rest();
 		}
 		else {
-			this.popUpText('Nearby Hostile!', '#ff0000');
+			this.popUpText('附近有敌人!', '#ff0000');
 		}
 	}
 	// Wait:
 	else {
 		this.actionQueue = [{type: 'WAIT'}];
-		this.popUpText('WAIT', '#ffffff');
+		this.popUpText('等待', '#ffffff');
 	}
 };
 
@@ -1637,51 +1637,51 @@ PlayerCharacter.prototype.death = function (damageType, flags) {
 	
 	// Burning self to death:
 	if (damageType === 'Fire' && flags.killer === this) {
-		gs.deathText = 'was burned to death';
+		gs.deathText = '被烧死';
 	} 
 	// Fire Shroom:
 	else if (flags.killer === 'FireShroom') {
-		gs.deathText = 'was burned to death by a fire shroom';
+		gs.deathText = '被烧死在火堆里';
 	}
 	//Fire Glyph:
 	else if (flags.killer === 'FireGlyph') {
-		gs.deathText = 'was burned to death by an exploding fire glyph';
+		gs.deathText = '被一个爆炸的字形烧死了';
 	}
 	// Spike Trap:
 	else if (flags.killer === 'SpikeTrap') {
-		gs.deathText = 'was impaled by spikes';
+		gs.deathText = '被尖峰刺穿';
 	}
 	// Bear Trap:
 	else if (flags.killer === 'BearTrap') {
-		gs.deathText = 'was killed by a bear trap';
+		gs.deathText = '被熊陷阱杀死';
 	}
 	// Killed Self:
 	else if (flags.killer === 'Lava') {
-		gs.deathText = 'was burned to death in a pool of lava';
+		gs.deathText = '在熔岩池中被烧死';
 	}
 	// Gas:
 	else if (flags.killer === 'Gas') {
-		gs.deathText = 'suffocated to death in toxic gas';	
+		gs.deathText = '在有毒的气体中窒息而死';	
 	} 
 	// Killed self:
 	else if (flags.killer === this) {
-		gs.deathText = 'killed himself';
+		gs.deathText = '自杀了';
 	}
 	// Unique Killer:
 	else if (flags.killer && flags.killer.type && flags.killer.type.isUnique) {
-		gs.deathText = 'was killed by ' + flags.killer.type.niceName;
+		gs.deathText = '被' + translator.getText(flags.killer.type.niceName) + '杀死了';
 	}
 	// Killer:
 	else if (flags.killer && flags.killer.type) {
-		gs.deathText = 'was killed by a ' + flags.killer.type.niceName;
+		gs.deathText = '被一只' + translator.getText(flags.killer.type.niceName) + '杀死了';
 	}
 	// Pit:
 	else if (flags.killer && flags.killer === 'Pit') {
-		gs.deathText = 'fell to his death.';
+		gs.deathText = '摔死了';
 	}
 	// Generic:
 	else {
-		gs.deathText = 'was killed';
+		gs.deathText = '死掉了';
 	}
 
 	this.isAlive = false;
@@ -1759,17 +1759,17 @@ PlayerCharacter.prototype.startExploring = function () {
 				this.isExploring = true;
 			} 
 			else {
-				this.popUpText('Partially Explored', '#ffffff');
+				this.popUpText('部分探索', '#ffffff');
 				this.stopExploring();
 			}
 		}
 		else {
-			this.popUpText('Exploration Complete', '#ffffff');
+			this.popUpText('全部探索完毕', '#ffffff');
 			this.stopExploring();
 		}
 	} 
 	else {
-		this.popUpText('Nearby Hostile!', '#ff0000');
+		this.popUpText('附近有敌人!', '#ff0000');
 		this.stopExploring();
 	}
 };

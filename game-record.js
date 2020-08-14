@@ -80,26 +80,26 @@ GameRecord.prototype.toString = function () {
 	date = new Date(this.date);
 	str += date.toDateString();
 	if (this.isChallenge) {
-		str += ' - daily challenge';
+		str += ' - 每日挑战';
 	}
 	str += ':\n';
 	
 	
-	str += 'lvl ' + this.playerLevel + ' ';
-	str += gs.capitalSplit(this.playerClass) + ' ';
+	str += this.playerLevel + '级的';
+	str += translator.getText(this.playerClass);
 	
 	
 	if (this.isWin) {
-		str += 'Successfully retrieved the goblet.';
+		str += '成功取回酒杯。';
 	}
 	else if (this.text && this.text.length > 0) {
-		str += this.text + ' in ' + gs.capitalSplit(this.zoneName) + ' ' + this.zoneLevel + '.';
+	str += '在' + translator.getText(this.zoneName) + this.zoneLevel + '层' + this.text + '。';
 	}
 	else {
-		str += 'Was killed in ' + gs.capitalSplit(this.zoneName) + ' ' + this.zoneLevel + '.';
+		str += '在' + translator.getText(this.zoneName) + this.zoneLevel + '层被杀死了。';
 	}
 
-	str += ' Time: ' + gs.timeToString(this.gameTime) + '.';
+	str += ' 耗时: ' + gs.timeToString(this.gameTime) + '';
 	
 	return str;
 };

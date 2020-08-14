@@ -608,7 +608,7 @@ gs.objectDesc = function (object) {
 		} 
 		else {
 			str = '向上的楼梯\n';
-			str += '通往' + gs.capitalSplit(object.toZoneName) + '的第' + gs.niceZoneLevel(object.toZoneName, object.toZoneLevel) + '层\n';
+			str += '通往' + translator.getText(object.toZoneName) + '的第' + gs.niceZoneLevel(object.toZoneName, object.toZoneLevel) + '层\n';
 			str += '在楼梯上按下s或者<上楼，\n你也可以在发现楼梯后按<快速上楼。'; 
 			return  str;
 		}
