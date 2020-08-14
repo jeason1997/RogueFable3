@@ -475,9 +475,9 @@ PlayerCharacter.prototype.getStatDesc = function (tag) {
 		str += '你当前的闪避给你' + gs.toPercentStr(this.dodgePercent()) + '的闪避概率。';
 	}
 	else if (tag === 'Reflection') {
-		str += '反射:\n';
-		str += '每一点反射使你用' + gs.toPercentStr(REFLECTION_PERCENT_PER_POINT) + '的概率反射投射攻击，\n最多累积到' + gs.toPercentStr(MAX_REFLECTION_PERCENT) + '。\n';
-		str += '你当前的反射给你' + gs.toPercentStr(this.reflectPercent()) + '的反射概率。';
+		str += '反击:\n';
+		str += '每一点反击使你用' + gs.toPercentStr(REFLECTION_PERCENT_PER_POINT) + '的概率反击投射攻击，\n最多累积到' + gs.toPercentStr(MAX_REFLECTION_PERCENT) + '。\n';
+		str += '你当前的反击给你' + gs.toPercentStr(this.reflectPercent()) + '的反击概率。';
 	}
 	else if (tag === 'Stealth') {
 		str += '潜行:\n';
@@ -518,24 +518,24 @@ PlayerCharacter.prototype.getStatDesc = function (tag) {
 		str += '你当前的法术威力使你获得+' + gs.toPercentStr(this.spellDamageMultiplier - 1) + '法术伤害修正值。';
 	}
 	else if (tag === 'FirePower') {
-		str += 'Fire Power:\n';
-		str += 'Each point of fire power increases the damage, duration etc. of all fire spells by 5%.\n';
-		str += 'Your fire power is giving you a +' + gs.toPercentStr(this.fireDamageMultiplier - 1) + ' modifier to all fire spells.';
+		str += '火属性威力:\n';
+		str += '每一点火属性威力都使所有火焰法术的\n伤害、持续时间等提高5%。\n';
+		str += '你当前的火属性威力使你获得+' + gs.toPercentStr(this.fireDamageMultiplier - 1) + '火属性伤害修正值。';
 	}
 	else if (tag === 'ColdPower') {
-		str += 'Cold Power:\n';
-		str += 'Each point of cold power increases the damage, duration etc. of all cold spells by 5%.\n';
-		str += 'Your cold power is giving you a +' + gs.toPercentStr(this.coldDamageMultiplier - 1) + ' modifier to all cold spells.';
+		str += '冰属性威力:\n';
+		str += '每一点冰属性威力能都使所有冰系法术的\n伤害、持续时间等提高5%。\n';
+		str += '你当前毒冰属性威力使你获得+' + gs.toPercentStr(this.coldDamageMultiplier - 1) + '冰属性伤害修正值。';
 	}
 	else if (tag === 'StormPower') {
-		str += 'Storm Power:\n';
-		str += 'Each point of storm power increases the damage, duration etc. of all storm spells by 5%.\n';
-		str += 'Your storm power is giving you a +' + gs.toPercentStr(this.shockDamageMultiplier - 1) + ' modifier to all storm spells.';
+		str += '风暴属性威力:\n';
+		str += '每一点风暴属性威力威力都使所有风暴法术的\n伤害、持续时间等提高5%。\n';
+		str += '你当前的风暴威力属性使你获得+' + gs.toPercentStr(this.shockDamageMultiplier - 1) + '风暴属性伤害修正值。';
 	}
 	else if (tag === 'ToxicPower') {
-		str += 'Toxic Power:\n';
-		str += 'Each point of toxic power increases the damage, duration etc. of all toxic spells by 5%.\n';
-		str += 'Your toxic power is giving you a +' + gs.toPercentStr(this.toxicDamageMultiplier - 1) + ' modifier to all toxic spells.';
+		str += '毒属性威力:\n';
+		str += '每一点毒属性威力能都使所有毒性法术\n伤害、持续时间等提高5%。\n';
+		str += '你当前的毒属性威力使你获得+' + gs.toPercentStr(this.toxicDamageMultiplier - 1) + '毒属性伤害修正值。';
 	}
 	
 	return str;

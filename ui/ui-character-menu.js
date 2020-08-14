@@ -273,7 +273,7 @@ UICharacterMenu.prototype.refreshStats = function () {
 	this.statList.push({name: '防御:',		val: ''});
 	this.statList.push({name: '守护:',	val: gs.pc.protection, tag: 'Protection'});
 	this.statList.push({name: '闪避:',		val: gs.pc.evasion, tag: 'Evasion'});
-	this.statList.push({name: '反射:',	val: gs.pc.reflection, tag: 'Reflection'});
+	this.statList.push({name: '反击:',	val: gs.pc.reflection, tag: 'Reflection'});
 	this.statList.push({name: '潜行:',		val: gs.pc.stealth, tag: 'Stealth'});
 	this.statList.push({name: '',				val: ''});
 	

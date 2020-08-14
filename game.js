@@ -419,7 +419,7 @@ gs.descriptionOfTileIndex = function (tileIndex) {
     }
 	// Unexplored:
 	else if (!gs.getTile(tileIndex).explored) {
-        return 'Unexplored';
+        return '未探索';
     }
 	// Character:
 	else if (gs.getChar(tileIndex) && gs.pc.canSeeCharacter(gs.getChar(tileIndex))) {
@@ -431,7 +431,7 @@ gs.descriptionOfTileIndex = function (tileIndex) {
     }
 	// Effect:
 	else if (gs.getCloud(tileIndex) && gs.getTile(tileIndex).visible) {
-		return gs.capitalSplit(gs.getCloud(tileIndex).name) || 'Effect';
+			return translator.getText(gs.getCloud(tileIndex).name) || 'Effect';
     }
 	// Item:
 	else if (gs.getItem(tileIndex)) {

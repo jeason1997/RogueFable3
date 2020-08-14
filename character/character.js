@@ -644,34 +644,34 @@ gs.characterDesc = function (character) {
 	var str = '';
 	
 	if (character === this.pc) {
-		str = 'Player\n';
-		str += 'Click yourself to wait a turn. Shift + click yourself to rest until full HP or full MP.';
+		str = '玩家\n';
+		str += '点击自己或者按Sapce键等待一回合，\n按住Shift并点击等待直到血量跟法力值恢复为止。';
 		return str;
 	}
 	
 	// Name:
 	if (character.name) {
-		str += this.capitalSplit(character.name) + '\n';
+		str += translator.getText(character.name) + '\n';
 	} else {
-		str += character.type.niceName + '\n';
+		str += translator.getText(character.type.niceName)+ '\n';
 	}
 	
 	// Level:
-	str += 'Level: ' + character.level + '\n';
+	str += '等级: ' + character.level + '\n';
 	
 	// HP:
-	str += 'HP: ' + character.currentHp + '/' + character.maxHp + '\n';
+	str += '生命值: ' + character.currentHp + '/' + character.maxHp + '\n';
 	
 	// size:
-	str += 'Size: ' + ['SMALL', 'MEDIUM', 'LARGE'][character.size] + '\n';
+	str += '身型: ' + ['矮小', '中等', '高大'][character.size] + '\n';
 
 	// Defense:
 	DAMAGE_TYPES.forEach(function (type) {
 		if (character.resistance[type] > 0) {
-			str += type + ' Resistant\n';
+			str += translator.getText(type) + '耐性\n';
 		}
 		else if (character.resistance[type] < 0) {
-			str += 'Vulnerable to ' + type + '\n';
+			str += '易受' + translator.getText(type) + '\n';
 		}
 	}, this);
 	
@@ -680,7 +680,7 @@ gs.characterDesc = function (character) {
 		str += 'Reflective\n';
 	}
 	
-	str += 'Spot Chance: ' + gs.toPercentStr(character.detectPlayerPercent()) + '\n';
+	str += '被发现的概率: ' + gs.toPercentStr(character.detectPlayerPercent()) + '\n';
 	
 	
 	return str;

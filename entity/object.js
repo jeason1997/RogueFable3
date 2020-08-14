@@ -601,21 +601,21 @@ gs.objectDesc = function (object) {
 	// ZoneLine:
 	if (object.isZoneLine()) {
 		if (object.type.name === 'DownStairs') {
-			str = 'Down stairs\n';
-			str += 'To ' + gs.capitalSplit(object.toZoneName) + ' level ' + gs.niceZoneLevel(object.toZoneName, object.toZoneLevel) + '\n';
-			str += '\nUse s or > to descend stairs. You can also use > to fast travel to down stairs once discovered.';
+			str = '向下的楼梯\n';
+			str += '通往' + translator.getText(object.toZoneName) + '的第' + gs.niceZoneLevel(object.toZoneName, object.toZoneLevel) + '层\n';
+			str += '在楼梯上按下s或者>下楼，\n你也可以在发现楼梯后按>快速下楼。';
 			return  str;
 		} 
 		else {
-			str = 'Up stairs\n';
-			str += 'To ' + gs.capitalSplit(object.toZoneName) + ' level ' + gs.niceZoneLevel(object.toZoneName, object.toZoneLevel) + '\n';
-			str += '\nUse s or < to ascend stairs. You can also use < to fast travel to up stairs once discovered.'; 
+			str = '向上的楼梯\n';
+			str += '通往' + gs.capitalSplit(object.toZoneName) + '的第' + gs.niceZoneLevel(object.toZoneName, object.toZoneLevel) + '层\n';
+			str += '在楼梯上按下s或者<上楼，\n你也可以在发现楼梯后按<快速上楼。'; 
 			return  str;
 		}
 	}
 	// Object:
 	else {
-		str = object.type.niceName + '\n';
+		str = translator.getText(object.type.niceName) + '\n';
 		
 		if (object.type.desc) {
 			str += object.type.desc;

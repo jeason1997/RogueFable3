@@ -29,6 +29,13 @@ var dic = {
     'Gnome': '侏儒',
     'Gargoyle': '石像鬼',
 
+    //生物
+    'Rat': '老鼠',
+
+    //物品
+    'Meat': '肉',
+    'Dart': '飞镖',
+
     //技能
     'Melee': '近战',
     'Fortitude': '坚韧',
@@ -40,6 +47,20 @@ var dic = {
     //状态效果
     'Wet': '湿透',
     'Unstable': '站不稳',
+
+    //地砖
+    'Water': '水',
+    'Wall': '墙壁',
+    'Floor': '地板',
+    'Cave Wall': '洞壁',
+    'Cave Floor': '洞穴地板',
+
+    //场景特效
+    'Smoke': '雾气',
+
+    //场景物件
+    'Door': '门',
+    'Fire Shroom': '火蘑菇',
 
     //天赋
     'FireBall': '火球',

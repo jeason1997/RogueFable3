@@ -27,7 +27,7 @@ gs.createTileTypes = function () {
 	this.tileTypes.ToxicWaste.color = '#51af12';
 	
 	// Tile Desc:
-	this.tileTypes.Water.desc = 'Creates unstable footing, making you vulnerable to melee attacks. Also makes you wet and vulnerable to shock';
+this.tileTypes.Water.desc = '在水中你无法站稳脚因此容易被近战攻击到，\n同时由于身体湿透了，\n火焰属性伤害减半但电属性伤害增倍。';
 	
 	
 	this.nameTypes(this.tileTypes);
@@ -36,7 +36,7 @@ gs.createTileTypes = function () {
 // TILE_DESC:
 // ************************************************************************************************
 gs.tileDesc = function (tile) {
-	var str = tile.type.niceName;
+	var str = translator.getText(tile.type.niceName); 
 	
 	if (tile.type.desc) {
 		str += '\n' + tile.type.desc;
@@ -151,7 +151,7 @@ gs.isBRay = function (startTileIndex, endTileIndex, pred) {
 };
 
 // GET_INDEX_IN_B_RAY:
-// Returns a list of all tile indices in a line using Bresenham’s algorithm
+// Returns a list of all tile indices in a line using Bresenhamâ€™s algorithm
 // ************************************************************************************************
 gs.getIndexInBRay = function (startTileIndex, endTileIndex) {
 	var deltaX = endTileIndex.x - startTileIndex.x,

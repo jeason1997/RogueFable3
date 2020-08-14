@@ -25,16 +25,16 @@ function Item (typeName, flags = {}) {
 Item.prototype.toShortDesc = function () {
 	var str = '';
 	
-	if (this.amount > 1) {
-		str += this.amount + ' x ';
-	}
-	
 	if (this.mod > 0) {
 		str += '+' + this.mod + ' ';
 	}
 	
-	str += this.type.niceName;
+	str += translator.getText(this.type.niceName);
 	
+	if (this.amount > 1) {
+		str += ' x ' + this.amount;
+	}
+
 	return str;
 };
 
@@ -67,12 +67,12 @@ Item.prototype.toLongDesc = function () {
 	
 	// Damage of Melee Weapons:
 	if (this.type.slot === 'weapon' && this.type.stats.damage > 0) {
-		str += 'Damage: ' + this.getModdedStat('damage') + ' [' + gs.pc.weaponDamage(this) + ']\n';
+		str += '伤害: ' + this.getModdedStat('damage') + ' [' + gs.pc.weaponDamage(this) + ']\n';
 	}
 
 	// Range:
 	if (this.type.slot === 'weapon') {
-		str += 'Range: ' + Math.floor(gs.pc.weaponRange(this)) + '\n';
+		str += '攻击范围: ' + Math.floor(gs.pc.weaponRange(this)) + '\n';
 	}
 
 	// Equipment Stats:
@@ -102,7 +102,7 @@ Item.prototype.toLongDesc = function () {
 	
 	// Charges:
 	if (this.type.stats.maxCharges) {
-		str += 'Charges: ' + this.charges + '/' + this.getModdedStat('maxCharges') + '\n';
+		str += '蓄力: ' + this.charges + '/' + this.getModdedStat('maxCharges') + '\n';
 	}
 	
 	// Ability Desc:
@@ -116,7 +116,7 @@ Item.prototype.toLongDesc = function () {
 	// Talents:
 	if (this.talents) {
 		for (let i = 0; i < this.talents.length; i += 1) {
-			str += '- ' + gs.capitalSplit(this.talents[i]) + '\n';
+			str += '- ' + translator.getText(this.talents[i]) + '\n';
 		}
 	}
 

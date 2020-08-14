@@ -353,24 +353,24 @@ PlayerCharacter.prototype.clickTileIndex = function (tileIndex, exploredOnly, fa
 	}
 	// Attacking with range (out of range):
 	else if (this.weaponSkill() === 'Range' && this.isVisibleHostileAt(tileIndex) && util.distance(this.tileIndex, tileIndex) > this.weaponRange()) {
-		this.popUpText('Out of Range', '#ff0000');
+		this.popUpText('超出范围', '#ff0000');
 	}
 	// Attacking with Range (out of mana):
 	else if (this.weaponSkill() === 'Range' && this.isVisibleHostileAt(tileIndex) && this.inventory.getWeapon().type.mpCost && this.currentMp < this.inventory.getWeapon().type.mpCost) {
-		this.popUpText('Out of mana', '#ff0000');
+		this.popUpText('法力不足', '#ff0000');
 	}
 	// Attacking with range (too close):
 	else if (this.weaponSkill() === 'Range' && this.isVisibleHostileAt(tileIndex) && util.distance(this.tileIndex, tileIndex) < this.weaponMinRange()) {
-		this.popUpText('Too Close', '#ff0000');
+		this.popUpText('太近', '#ff0000');
 	}
 	// Attacking with Range (line blocked):
 	else if (this.weaponSkill() === 'Range' && this.isVisibleHostileAt(tileIndex) && !this.canAttack(tileIndex)) {
-		this.popUpText('No clear line', '#ff0000');
+		this.popUpText('与目标间有障碍', '#ff0000');
 	}
 	// Squeeze Move:
 	else if (gs.state === 'GAME_STATE' && this.isSqueezeMove(tileIndex)) {
 		this.moveTo(tileIndex, 200);
-		this.popUpText('Squeeze', '#ffffff');
+		this.popUpText('挤', '#ffffff');
 	}
 	// Stop Slow characters from accidently diagonally moving:
 	else if (gs.state === 'GAME_STATE'
@@ -996,12 +996,12 @@ PlayerCharacter.prototype.cannotUseAbility = function (abilityIndex) {
 
 	// Confused:
 	if (this.isConfused) {
-		return 'Confused!';
+		return '混乱了!';
 	}
 	
 	// Cooldown not done:
 	if (ability.coolDown > 0) {
-		return 'Not Ready';
+		return '还没冷却好';
 	}
 	
 	// Sustained abilities:
@@ -1012,23 +1012,23 @@ PlayerCharacter.prototype.cannotUseAbility = function (abilityIndex) {
 		}
 		// Not enough max mana:
 		else if (ability.type.isSustained && !ability.isOn && this.maxMp < this.manaCost(ability.type)) {
-			return 'Out of Mana';
+			return '法力不足';
 		}
 	} 
 	// Mana no enough:
 	else if (this.currentMp < this.manaCost(ability.type) && !gs.debugProperties.disableMana) {
-		return 'Out of Mana';
+		return '法力不足';
 	}
 	
 	
 	// Hit Points not enough:
 	if (this.currentHp <= ability.type.hitPointCost) {
-		return 'Out of Health';
+		return '生命不足';
 	}
 	
 	// Basic canUse requirement not met:
 	if (!ability.type.canUse(this)) {
-		return 'Cannot use';
+		return '无法使用';
 	}
 	
 	// Charm has no charge:
@@ -1151,7 +1151,7 @@ PlayerCharacter.prototype.zap = function (tileIndex) {
 	var abilityType = this.selectedAbility.type;
 	
 	if (!abilityType.useImmediately && abilityType.range && util.distance(this.tileIndex, tileIndex) > abilityType.range) {
-		this.popUpText('Out of Range', '#ff0000');
+		this.popUpText('', '#ff0000');
 		gs.state = gs.state === 'USE_ABILITY_STATE' ? 'GAME_STATE' : gs.state;
 	} 
 	else {
