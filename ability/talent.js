@@ -189,124 +189,124 @@ gs.createTalentDesc = function () {
 	// NECROMANCY:
 	this.talents.ToxicMastery.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return '+' + this.bonus[talentLevel - 1] + ' toxic magic power.';
+			return '+' + this.bonus[talentLevel - 1] + ' 毒法力威力';
 		}
 		else {
 			return '';
 		}
 	};	
-	this.talents.LifeSpike.desc = 			'Drains the life of the target over time, healing the caster. Can be stacked multiple times.';
-	this.talents.ToxicAttunement.desc = 	'Increases your toxic magic power and reduces toxic magic mana cost by 1MP for the duration of the effect.';
-	this.talents.Cannibalise.desc = 		'Sacrifices 8 hit points to regain 6 points of mana.';
-	this.talents.PoisonCloud.desc = 		'Summons a cloud of poison gas.';
-	this.talents.SummonSkeleton.desc =		'Summons one or more skeletal minion to fight for you.';
-	this.talents.InfectiousDisease.desc = 	'Infects a single target with a disease which will spread to nearby characters.';
+	this.talents.LifeSpike.desc = 			'持续吸取目标的生命，治疗施法者。可以堆叠多次';
+	this.talents.ToxicAttunement.desc = 	'在此效果持续期间，增加你的毒法力威力并在\n施放毒法力的时候降低一点法力值消耗。';
+	this.talents.Cannibalise.desc = 		'牺牲8点生命，来恢复6点法力值。';
+	this.talents.PoisonCloud.desc = 		'召唤出一团毒气';
+	this.talents.SummonSkeleton.desc =		'召唤出一个或者多个骷髅怪为你战斗。';
+	this.talents.InfectiousDisease.desc = 	'用一种疾病感染单个目标，该疾病会传染给附近的角色。';
 	
 	// FIRE_MAGIC:
 	this.talents.FireMastery.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return '+' + this.bonus[talentLevel - 1] + ' fire magic power.';
+			return '+' + this.bonus[talentLevel - 1] + ' 火法力威力';
 		}
 		else {
 			return '';
 		}
-	};	
+		};	
 	this.talents.FireBall.desc = 			'发射一个会爆炸的火球，伤害怪物并点燃可燃物。';
-	this.talents.FireAttunement.desc = 		'Increases your fire magic power and reduces fire magic mana cost by 1MP for the duration of the effect.';
-	this.talents.BurstOfFlame.desc = 		'Creates a burst of flame on a single tile. Will create a large burst if used on a torch or other flaming object.';
-	this.talents.InfernoOrb.desc = 			'Summons a slow moving fire ball which bursts upon impact in a powerful explosion.';
-	this.talents.FlamingHands.desc =		'You will throw flaming projectiles with every attack for the duration of the effect.';
-	this.talents.FireBolt.desc = 			'Sends forth a bolt of fire, hitting multiple monsters in a straight line.';
+	this.talents.FireAttunement.desc = 		'在此效果持续期间，增加你的火法力威力并在\n施放火法力的时候降低一点法力值消耗。';
+	this.talents.BurstOfFlame.desc = 		'在地板上施放一坨火焰。如果放在火炬或其他\n燃烧的物体上，会产生大爆炸。';
+	this.talents.InfernoOrb.desc = 			'召唤一个缓慢移动的火球，一旦撞击就会产生\n强烈的爆炸。';
+	this.talents.FlamingHands.desc =		'在此效果持续期间，你将在每次攻击中投掷燃\n烧的炮弹。';
+	this.talents.FireBolt.desc = 			'发射出一道火焰，击中途径中的多个怪物。';
 	
 	// STORM_MAGIC:
 	this.talents.StormMastery.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return '+' + this.bonus[talentLevel - 1] + ' storm magic power.';
+			return '+' + this.bonus[talentLevel - 1] + ' 风暴法力威力';
 		}
 		else {
 			return '';
 		}
 	};	
-	this.talents.LightningBolt.desc = 		'Sends forth a bolt of lightning, hitting multiple monsters in a straight line.';
-	this.talents.StormAttunement.desc = 	'Increases your storm magic power and reduces storm magic mana cost by 1MP for the duration of the effect.';
-	this.talents.Shock.desc =				'Shocks your target and spreads to all adjacent characters.';
-	this.talents.ThunderClap.desc = 		'Creates a massive boom of thunder stunning all enemies for the duration of the effect.';
-	this.talents.StaticDischarge.desc = 	'Lets loose a powerful burst of electricity damaging all nearby monsters.';
+	this.talents.LightningBolt.desc = 		'发射出一道闪电，击中途径中的多个怪物。';
+	this.talents.StormAttunement.desc = 	'在此效果持续期间，增加你的风暴法力威力并在\n施放风暴法力的时候降低一点法力值消耗。';
+	this.talents.Shock.desc =				'电击目标并传导给所有相邻的角色。';
+	this.talents.ThunderClap.desc = 		'产生一个巨大的雷电，在此效果持续期间电轰所有敌人';
+	this.talents.StaticDischarge.desc = 	'释放出一股强大的电流，伤害附近所有的怪物。';
 	
 	// ICE_MAGIC:
 	this.talents.ColdMastery.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return '+' + this.bonus[talentLevel - 1] + ' ice magic power.';
+			return '+' + this.bonus[talentLevel - 1] + ' 冰法力威力';
 		}
 		else {
 			return '';
 		}
 	};	
-	this.talents.ColdAttunement.desc = 		'Increases your cold magic power and reduces cold magic mana cost by 1MP for the duration of the effect.';
-	this.talents.ConeOfCold.desc =			'Blasts a group of enemies with freezing cold, damaging, slowing and knocking them back.';
-	this.talents.FreezingCloud.desc =		'Summons a cloud of freezing vapours that will damage characters standing within it.';
-	this.talents.Freeze.desc =				'Freezes a character in a block of ice, rendering them unable to act for the duration of the effect.';
-	this.talents.IceArmor.desc =			'Grants +5 protection while maintaining the effect.';
-	this.talents.FlashFreeze.desc =			'Freezes every character in your line of sight in a block of ice, rendering them unable to act.';
+	this.talents.ColdAttunement.desc = 		'在此效果持续期间，增加你的冰系法力威力并在\n施放冰系法力的时候降低一点法力值消耗。';
+	this.talents.ConeOfCold.desc =			'用冰霜攻击一群敌人，伤害，减速并击退他们。';
+	this.talents.FreezingCloud.desc =		'召唤一团冰冻的蒸汽云，它会伤害站在里面的角色。';
+	this.talents.Freeze.desc =				'将目标冰冻起来，使其在此效果持续期间无法行动。';
+	this.talents.IceArmor.desc =			'效果持续期间给予+5点守护。';
+	this.talents.FlashFreeze.desc =			'将视线中的每个角色冻结在冰块中，使其无法行动。';
 	
 	// ENCHANTMENT_MAGIC:
-	this.talents.Confusion.desc =			'Confuses one or more creatures causing them to attack their nearest target.';
-	this.talents.Fear.desc =				'Causes all enemies in a radius around you to run away in fear.';
-	this.talents.Charm.desc =				'Charms a single creature, turning it temporarily to your side.';
-	this.talents.Mesmerize.desc =			'Puts a group of enemies into a deep sleep.';
-	this.talents.Swiftness.desc =			'Allows you to move at double speed while maintaining this effect.';
+	this.talents.Confusion.desc =			'迷惑范围内一个或多个角色，使其攻击离它最近的目标。';
+	this.talents.Fear.desc =				'使你身边范围内的所有敌人恐惧地逃跑。';
+	this.talents.Charm.desc =				'魅惑一个目标，使它暂时为你战斗。';
+	this.talents.Mesmerize.desc =			'使一群敌人陷入沉睡。';
+	this.talents.Swiftness.desc =			'效果持续期间，移动速度变为两倍。';
 	
 	// MELEE:
 	this.talents.WeaponMastery.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return '+' + this.bonus[talentLevel - 1] + ' melee weapon power.';
+			return '+' + this.bonus[talentLevel - 1] + ' 近战武器威力';
 		}
 		else {
 			return '';
 		}
 	};	
-	this.talents.PowerStrike.desc = 		'Delivers a powerful strike with your weapon dealing increased damage and knockback.';
-	this.talents.Charge.desc = 				'Allows you to sprint towards an enemy and attack in a single turn.';
-	this.talents.Berserk.desc = 			'You will deal critical hits with every melee attack for the duration of the effect.';
+	this.talents.PowerStrike.desc = 		'用你的近战武器发出强力一击，\n造成更大的伤害和击退敌人';
+	this.talents.Charge.desc = 				'冲刺到一个敌人身边并攻击它';
+	this.talents.Berserk.desc = 			'效果持续期间，你的每一次近战攻击都会造成暴击。';
 	
-	this.talents.BloodLust.desc = 			'+1 max rage.';
-	this.talents.WarCry.desc =				'Instantly fills your rage meter and stuns enemies around you. Also alerts nearby enemies.';
+	this.talents.BloodLust.desc = 			'+1 最大怒气值';
+	this.talents.WarCry.desc =				'瞬间充满你的怒气槽并打晕你周围的敌人。\n但同时会使附近的所有敌人察觉你。';
 	
 	// RANGE:
 	this.talents.RangeMastery.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return '+' + this.bonus[talentLevel - 1] + ' range weapon power.';
+			return '+' + this.bonus[talentLevel - 1] + ' 远程武器威力';
 		}
 		else {
 			return '';
 		}
 	};	
-	this.talents.PowerShot.desc = 			'Delivers a powerful shot with your ranged weapon dealing increased damage and knockback.';
-	this.talents.TunnelShot.desc = 			'Allows you to throw a projectile clear through a number of monsters, dealing increased damage.';
-	this.talents.DeadEye.desc = 			'When activated, you will deal critical hits with every ranged attack for the duration of the effect.';
-	this.talents.PerfectAim.desc =			'Allows you to shoot at your desired target through other enemies.';
-	this.talents.Disengage.desc =			'Attack an enemy and back up a step. No cooldown when dealing a killing blow.';
-	this.talents.Lunge.desc =				'Lunge and attack an enemy. No cooldown when dealing a killing blow.';
+	this.talents.PowerShot.desc = 			'用你的远程武器发出强力一击，\n造成更大的伤害和击退敌人。';
+	this.talents.TunnelShot.desc = 			'允许你的投掷物穿过大量的怪物，造成额外的伤害。';
+	this.talents.DeadEye.desc = 			'使用后，在生效期间你的每一次远程攻击都会造成暴击。';
+	this.talents.PerfectAim.desc =			'允许你绕过其他敌人射击你想要攻击的目标。';
+	this.talents.Disengage.desc =			'攻击敌人并后退一步，若造成致命一击则立刻冷却完毕。';
+	this.talents.Lunge.desc =				'猛冲并攻击敌人，若造成致命一击则立刻冷却完毕。';
 	//this.talents.StrongArm.desc = 			'+1 range and +10% damage, with thrown weapons.';
 	//this.talents.AmmoConservation.desc = 	'+10% chance to save ammo per talent level.';
 	
 	
 	// DEFENSE:
-	this.talents.ShieldsUp.desc =		'You will block and counterattack against every enemy that strikes you in the next turn';
-	this.talents.ShieldWall.desc =		'Increases protection for every adjacent wall';
-	this.talents.Deflect.desc =			'+10 reflection for the duration of the effect.';
+	this.talents.ShieldsUp.desc =		'您将在下一回合中对每一个击中您的敌人\n进行阻挡和反击。';
+	this.talents.ShieldWall.desc =		'增加对每一面相邻的墙的保护。';
+	this.talents.Deflect.desc =			'在效果持续期间内给予+10点反击。';
 	this.talents.Fortitude.desc = 		function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return 'Increases your max hit points by ' + this.bonusHp[talentLevel - 1] + '.';
+			return '提高你的最大生命值 ' + this.bonusHp[talentLevel - 1] + '点。';
 		}
 		else {
 			return '';
 		}
 	};	
-	this.talents.Regeneration.desc =	'+1 HP regeneration.';
+	this.talents.Regeneration.desc =	'+1 生命值恢复速度';
 	this.talents.FireResistance.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return '+1 Fire Resistance.';
+			return '+1 火抗性';
 		}
 		else {
 			return '';
@@ -314,7 +314,7 @@ gs.createTalentDesc = function () {
 	};	
 	this.talents.ColdResistance.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return '+1 Cold Resistance.';
+			return '+1 冰抗性';
 		}
 		else {
 			return '';
@@ -322,7 +322,7 @@ gs.createTalentDesc = function () {
 	};	
 	this.talents.ShockResistance.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return '+1 Shock Resistance.';
+			return '+1 电抗性';
 		}
 		else {
 			return '';
@@ -330,7 +330,7 @@ gs.createTalentDesc = function () {
 	};	
 	this.talents.ToxicResistance.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return '+1 Toxic Resistance.';
+			return '+1 毒抗性';
 		}
 		else {
 			return '';
@@ -341,7 +341,7 @@ gs.createTalentDesc = function () {
 	// FOCUS:
 	this.talents.MagicMastery.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return '+' + this.bonus[talentLevel - 1] + ' magic power.';
+			return '+' + this.bonus[talentLevel - 1] + ' 法术威力';
 		}
 		else {
 			return '';
@@ -349,13 +349,13 @@ gs.createTalentDesc = function () {
 	};	
 	this.talents.Focus.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return 'Increases your max mana points by ' + this.bonusMp[talentLevel - 1] + '.';
+			return '提高你的最大法力值' + this.bonusMp[talentLevel - 1] + '点。';
 		}
 		else {
 			return '';
 		}
 	};	
-	this.talents.Tranquility.desc =		'+1 MP regeneration.';
+	this.talents.Tranquility.desc =		'+1 法力值恢复速度';
 	//this.talents.Adrenaline.desc = 			'50% chance to save mana when less then 1/3 HP.';
 	//this.talents.ManaConservation.desc = 	'There is a 20% chance when using an ability that mana will not be consumed.';
 
@@ -363,21 +363,21 @@ gs.createTalentDesc = function () {
 	// STEALTH:
 	this.talents.StealthMastery.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return '+' + this.bonus[talentLevel - 1] + ' stealth.';
+			return '+' + this.bonus[talentLevel - 1] + ' 潜行';
 		}
 		else {
 			return '';
 		}
 	};	
-	this.talents.SleepingDart.desc = 	"Puts an enemy into a deep sleep.";
-	this.talents.SmokeBomb.desc =		"Creates a cloud of opaque smoke, blocking line of sight.";
-	this.talents.DungeonSense.desc = 	'Reveals the location of all treasure and stairs on your mini-map.';
-	this.talents.NimbleFingers.desc =	'Allows you to pick up and place traps.';
-	this.talents.Evade.desc = 			'When activated, all monsters will immediately forget about you.';
-	this.talents.HeadShot.desc =		'Allows you to perform ranged sneak attacks.';
+	this.talents.SleepingDart.desc = 	"使敌人陷入沉睡。";
+	this.talents.SmokeBomb.desc =		"产生一团浓烟阻挡视线。";
+	this.talents.DungeonSense.desc = 	'在小地图上显示所有宝箱和楼梯的位置。';
+	this.talents.NimbleFingers.desc =	'允许你捡起和放置陷阱。';
+	this.talents.Evade.desc = 			'使用后，所有的怪物都会立刻忘记你。';
+	this.talents.HeadShot.desc =		'允许你执行远程偷袭。';
 	this.talents.KeenHearing.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return 'Allows you to detect nearby monsters on your mini-map up to a range of  ' + this.range[talentLevel - 1] + ' tiles.';
+			return '允许你在小地图上检测到附近' + this.range[talentLevel - 1] + '格范围内的怪物。';
 		}
 		else {
 			return '';
@@ -391,18 +391,18 @@ gs.createTalentDesc = function () {
 	// ATHLETICS:
 	this.talents.Evasive.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return '+' + this.bonus[talentLevel - 1] + ' evasion.';
+			return '+' + this.bonus[talentLevel - 1] + ' 回避';
 		}
 		else {
 			return '';
 		}
 	};	
-	this.talents.Sprint.desc = 			'Allows you to sprint multiple tiles in a single turn.';
-	this.talents.StrafeAttack.desc =		'You will automatically attack the nearest enemy when moving towards or strafing.';
+	this.talents.Sprint.desc = 			'一回合内冲刺到某地';
+	this.talents.StrafeAttack.desc =	'走向或横扫时，您将自动攻击最近的敌人。';
 	
 	this.talents.StoneSkin.desc = function (talentLevel) {
 		if (talentLevel <= this.level.length) {
-			return '+' + this.bonus[talentLevel - 1] + ' protection.';
+			return '+' + this.bonus[talentLevel - 1] + ' 守护';
 		}
 		else {
 			return '';

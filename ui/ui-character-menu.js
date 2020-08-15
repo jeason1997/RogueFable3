@@ -133,7 +133,7 @@ UICharacterMenu.prototype.refreshTalentPanel = function () {
 			let talentName = gs.pc.availableTalents[this.availableTalentButtonList.startIndex + j];
 			
 			this.availableTalentButtonList.buttons[j].button.talentName = talentName;
-			this.availableTalentButtonList.buttons[j].text.setText(gs.capitalSplit(talentName));
+			this.availableTalentButtonList.buttons[j].text.setText(translator.getText(talentName));
 			this.availableTalentButtonList.buttons[j].numText.setText('0/' + gs.talents[talentName].level.length);
 			this.availableTalentButtonList.buttons[j].group.visible = true;
 			
